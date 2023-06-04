@@ -1,11 +1,9 @@
-import Head from 'next/head'
-import Link from 'next/link'
-
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
-import { SelectField, TextField } from '@/components/Fields'
+import { TextField, SelectField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
-
+import Head from 'next/head'
+import Link from 'next/link'
 export default function Register() {
   return (
     <>
@@ -88,6 +86,7 @@ export default function Register() {
               variant="solid"
               color="blue"
               className="w-full"
+              href={undefined}
             >
               <span>
                 Sign up <span aria-hidden="true">&rarr;</span>

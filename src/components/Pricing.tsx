@@ -1,9 +1,7 @@
 import clsx from 'clsx'
-
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-
-function SwirlyDoodle({ className }) {
+import { Button } from './Button'
+import { Container } from './Container'
+function SwirlyDoodle({ className }: any) {
   return (
     <svg
       aria-hidden="true"
@@ -19,8 +17,7 @@ function SwirlyDoodle({ className }) {
     </svg>
   )
 }
-
-function CheckIcon({ className }) {
+function CheckIcon({ className }: any) {
   return (
     <svg
       aria-hidden="true"
@@ -45,8 +42,14 @@ function CheckIcon({ className }) {
     </svg>
   )
 }
-
-function Plan({ name, price, description, href, features, featured = false }) {
+function Plan({
+  name,
+  price,
+  description,
+  href,
+  features,
+  featured = false,
+}: any) {
   return (
     <section
       className={clsx(
@@ -73,7 +76,7 @@ function Plan({ name, price, description, href, features, featured = false }) {
           featured ? 'text-white' : 'text-slate-200'
         )}
       >
-        {features.map((feature) => (
+        {features.map((feature: any) => (
           <li key={feature} className="flex">
             <CheckIcon className={featured ? 'text-white' : 'text-slate-400'} />
             <span className="ml-4">{feature}</span>
@@ -92,7 +95,6 @@ function Plan({ name, price, description, href, features, featured = false }) {
     </section>
   )
 }
-
 export function Pricing() {
   return (
     <section
@@ -100,7 +102,7 @@ export function Pricing() {
       aria-label="Pricing"
       className="bg-slate-900 py-20 sm:py-32"
     >
-      <Container>
+      <Container className={undefined}>
         <div className="md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">

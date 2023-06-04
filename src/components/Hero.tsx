@@ -1,14 +1,12 @@
 import Image from 'next/image'
-
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
 import logoLaravel from '@/images/logos/laravel.svg'
 import logoMirage from '@/images/logos/mirage.svg'
 import logoStatamic from '@/images/logos/statamic.svg'
 import logoStaticKit from '@/images/logos/statickit.svg'
 import logoTransistor from '@/images/logos/transistor.svg'
 import logoTuple from '@/images/logos/tuple.svg'
-
+import { Button } from './Button'
+import { Container } from './Container'
 export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
@@ -32,10 +30,13 @@ export function Hero() {
         opposite trade-off, and hope you don’t get audited.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Get 6 months free</Button>
+        <Button href="/register" className={undefined}>
+          Get 6 months free
+        </Button>
         <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
+          className={undefined}
         >
           <svg
             aria-hidden="true"

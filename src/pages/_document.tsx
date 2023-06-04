@@ -1,6 +1,8 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 
-export default function Document(props) {
+export default function Document(props: {
+  __NEXT_DATA__: { props: { pageProps: any } }
+}) {
   let pageProps = props.__NEXT_DATA__?.props?.pageProps
 
   return (

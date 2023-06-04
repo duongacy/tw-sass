@@ -2,14 +2,12 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
-
-import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
-
+import { Container } from './Container'
 const features = [
   {
     title: 'Payroll',
@@ -36,25 +34,19 @@ const features = [
     image: screenshotReporting,
   },
 ]
-
 export function PrimaryFeatures() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
-
   useEffect(() => {
     let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
-
-    function onMediaQueryChange({ matches }) {
+    function onMediaQueryChange({ matches }: any) {
       setTabOrientation(matches ? 'vertical' : 'horizontal')
     }
-
     onMediaQueryChange(lgMediaQuery)
     lgMediaQuery.addEventListener('change', onMediaQueryChange)
-
     return () => {
       lgMediaQuery.removeEventListener('change', onMediaQueryChange)
     }
   }, [])
-
   return (
     <section
       id="features"

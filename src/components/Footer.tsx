@@ -1,13 +1,11 @@
 import Link from 'next/link'
-
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
-
+import { Container } from './Container'
+import { Logo } from './Logo'
+import { NavLink } from './NavLink'
 export function Footer() {
   return (
     <footer className="bg-slate-50">
-      <Container>
+      <Container className={undefined}>
         <div className="py-16">
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">

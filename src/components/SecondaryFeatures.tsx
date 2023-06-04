@@ -2,12 +2,10 @@ import { useId } from 'react'
 import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
-
-import { Container } from '@/components/Container'
 import screenshotContacts from '@/images/screenshots/contacts.png'
 import screenshotInventory from '@/images/screenshots/inventory.png'
 import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
-
+import { Container } from './Container'
 const features = [
   {
     name: 'Reporting',
@@ -95,8 +93,7 @@ const features = [
     },
   },
 ]
-
-function Feature({ feature, isActive, className, ...props }) {
+function Feature({ feature, isActive, className, ...props }: any) {
   return (
     <div
       className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
@@ -127,7 +124,6 @@ function Feature({ feature, isActive, className, ...props }) {
     </div>
   )
 }
-
 function FeaturesMobile() {
   return (
     <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
@@ -150,7 +146,6 @@ function FeaturesMobile() {
     </div>
   )
 }
-
 function FeaturesDesktop() {
   return (
     <Tab.Group as="div" className="hidden lg:mt-20 lg:block">
@@ -205,7 +200,6 @@ function FeaturesDesktop() {
     </Tab.Group>
   )
 }
-
 export function SecondaryFeatures() {
   return (
     <section
@@ -213,7 +207,7 @@ export function SecondaryFeatures() {
       aria-label="Features for simplifying everyday business tasks"
       className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
     >
-      <Container>
+      <Container className={undefined}>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Simplify everyday business tasks.

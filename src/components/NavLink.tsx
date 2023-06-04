@@ -1,6 +1,5 @@
 import Link from 'next/link'
-
-export function NavLink({ href, children }) {
+export function NavLink({ href, children }: any) {
   return (
     <Link
       href={href}

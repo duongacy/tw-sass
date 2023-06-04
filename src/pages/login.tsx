@@ -1,11 +1,9 @@
-import Head from 'next/head'
-import Link from 'next/link'
-
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
-
+import Head from 'next/head'
+import Link from 'next/link'
 export default function Login() {
   return (
     <>
@@ -56,6 +54,7 @@ export default function Login() {
               variant="solid"
               color="blue"
               className="w-full"
+              href={undefined}
             >
               <span>
                 Sign in <span aria-hidden="true">&rarr;</span>

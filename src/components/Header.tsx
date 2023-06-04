@@ -2,21 +2,18 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
-
-function MobileNavLink({ href, children }) {
+import { Button } from './Button'
+import { Container } from './Container'
+import { Logo } from './Logo'
+import { NavLink } from './NavLink'
+function MobileNavLink({ href, children }: any) {
   return (
     <Popover.Button as={Link} href={href} className="block w-full p-2">
       {children}
     </Popover.Button>
   )
 }
-
-function MobileNavIcon({ open }) {
+function MobileNavIcon({ open }: any) {
   return (
     <svg
       aria-hidden="true"
@@ -42,7 +39,6 @@ function MobileNavIcon({ open }) {
     </svg>
   )
 }
-
 function MobileNavigation() {
   return (
     <Popover>
@@ -88,11 +84,10 @@ function MobileNavigation() {
     </Popover>
   )
 }
-
 export function Header() {
   return (
     <header className="py-10">
-      <Container>
+      <Container className={undefined}>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
@@ -108,7 +103,7 @@ export function Header() {
             <div className="hidden md:block">
               <NavLink href="/login">Sign in</NavLink>
             </div>
-            <Button href="/register" color="blue">
+            <Button href="/register" color="blue" className={undefined}>
               <span>
                 Get started <span className="hidden lg:inline">today</span>
               </span>
