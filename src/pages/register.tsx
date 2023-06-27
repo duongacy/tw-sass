@@ -4,26 +4,26 @@ import { TextField, SelectField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 import Head from 'next/head'
 import Link from 'next/link'
-export default function Register() {
+const Register = () => {
   return (
     <>
       <Head>
         <title>Sign Up - TaxPal</title>
       </Head>
       <AuthLayout>
-        <div className="flex flex-col">
+        <div className="grid gap-16">
           <Link href="/" aria-label="Home">
             <Logo className="h-10 w-auto" />
           </Link>
-          <div className="mt-20">
-            <h2 className="text-lg font-semibold text-gray-900">
+          <div className="grid gap-2">
+            <h2 className="text-lg font-semibold text-neutral-900">
               Get started for free
             </h2>
-            <p className="mt-2 text-sm text-gray-700">
+            <p className="text-sm text-neutral-700">
               Already registered?{' '}
               <Link
                 href="/login"
-                className="font-medium text-blue-600 hover:underline"
+                className="font-medium text-primary-600 hover:underline"
               >
                 Sign in
               </Link>{' '}
@@ -31,10 +31,7 @@ export default function Register() {
             </p>
           </div>
         </div>
-        <form
-          action="#"
-          className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2"
-        >
+        <form action="#" className="mt-10 grid gap-6 sm:grid-cols-2">
           <TextField
             label="First name"
             id="first_name"
@@ -80,21 +77,20 @@ export default function Register() {
             <option>Our route 34 city bus ad</option>
             <option>The “Never Use This” podcast</option>
           </SelectField>
-          <div className="col-span-full">
-            <Button
-              type="submit"
-              variant="solid"
-              color="blue"
-              className="w-full"
-              href={undefined}
-            >
-              <span>
-                Sign up <span aria-hidden="true">&rarr;</span>
-              </span>
-            </Button>
-          </div>
+          <Button
+            type="submit"
+            variant="solid"
+            color="blue"
+            className="col-span-full"
+            href={undefined}
+          >
+            <span>
+              Sign up <span aria-hidden="true">&rarr;</span>
+            </span>
+          </Button>
         </form>
       </AuthLayout>
     </>
   )
 }
+export default Register

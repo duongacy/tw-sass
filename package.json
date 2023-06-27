@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "c":"react-js-to-ts"
+    "c": "react-js-to-ts"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -21,11 +21,13 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "^3.3.0",
-    "touch-cli": "^0.0.1"
+    "touch-cli": "^0.0.1",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "20.2.5",
     "@types/react": "^18.2.8",
+    "@types/uuid": "^9.0.2",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.2",
     "prettier": "^2.8.7",

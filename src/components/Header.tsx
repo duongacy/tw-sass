@@ -1,19 +1,51 @@
-import { Fragment } from 'react'
-import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
+import Link from 'next/link'
+import { FC, Fragment } from 'react'
+import { v4 } from 'uuid'
 import { Button } from './Button'
 import { Container } from './Container'
 import { Logo } from './Logo'
-import { NavLink } from './NavLink'
-function MobileNavLink({ href, children }: any) {
-  return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
-      {children}
-    </Popover.Button>
-  )
+import { MobileNavLink, NavLink, NavLinkProps } from './NavLink'
+
+interface NavigationProps {
+  navLinks?: NavLinkProps[]
+  loginLink?: NavLinkProps
+  homeLink?: NavLinkProps
 }
-function MobileNavIcon({ open }: any) {
+
+interface HeaderProps {
+  navigationProps: NavigationProps
+}
+
+const headerProps: HeaderProps = {
+  navigationProps: {
+    navLinks: [
+      {
+        href: '#features',
+        children: 'Features',
+      },
+      {
+        href: '#testimonials',
+        children: 'Testimonials',
+      },
+      {
+        href: '#pricing',
+        children: 'Pricing',
+      },
+    ],
+    loginLink: {
+      href: '/login',
+      children: 'Sign in',
+    },
+    homeLink: {
+      href: '#',
+      children: <Logo className="h-10 w-auto" />,
+    },
+  },
+}
+
+const MobileNavIcon: FC<{ open: boolean }> = ({ open }) => {
   return (
     <svg
       aria-hidden="true"
@@ -39,7 +71,8 @@ function MobileNavIcon({ open }: any) {
     </svg>
   )
 }
-function MobileNavigation() {
+
+const MobileNavigation: FC<NavigationProps> = () => {
   return (
     <Popover>
       <Popover.Button
@@ -73,47 +106,55 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            {headerProps?.navigationProps?.navLinks?.map((navLink) => (
+              <MobileNavLink key={v4()} {...navLink} />
+            ))}
+
+            {headerProps?.navigationProps?.loginLink && (
+              <>
+                <hr className="m-2 border-slate-300/40" />
+                <MobileNavLink {...headerProps.navigationProps.loginLink} />
+              </>
+            )}
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
     </Popover>
   )
 }
-export function Header() {
-  return (
-    <header className="py-10">
-      <Container className={undefined}>
-        <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              <Logo className="h-10 w-auto" />
-            </Link>
+
+export const Header = () => (
+  <header className="py-10">
+    <Container className={undefined}>
+      <nav className="relative z-50 flex justify-between">
+        <div className="flex items-center md:gap-x-12">
+          {headerProps?.navigationProps?.homeLink && (
+            <Link {...headerProps?.navigationProps.homeLink} />
+          )}
+          {headerProps?.navigationProps?.navLinks && (
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              {headerProps?.navigationProps.navLinks.map((navLink) => (
+                <NavLink key={v4()} {...navLink} />
+              ))}
             </div>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
+          )}
+        </div>
+        <div className="flex items-center gap-x-5 md:gap-x-8">
+          {headerProps?.navigationProps?.loginLink && (
             <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+              <NavLink {...headerProps.navigationProps.loginLink} />
             </div>
-            <Button href="/register" color="blue" className={undefined}>
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
+          )}
+          <Button href="/register" color="blue" className={undefined}>
+            <span>
+              Get started <span className="hidden lg:inline">today</span>
+            </span>
+          </Button>
+          <div className="-mr-1 md:hidden">
+            <MobileNavigation />
           </div>
-        </nav>
-      </Container>
-    </header>
-  )
-}
+        </div>
+      </nav>
+    </Container>
+  </header>
+)

@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -30,6 +31,19 @@ module.exports = {
       maxWidth: {
         '2xl': '40rem',
       },
+    },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      neutral: colors.gray,
+      slate: colors.slate,
+      primary: colors.blue,
+      info: '',
+      success: '',
+      error: '',
+      warning: '',
     },
   },
   plugins: [require('@tailwindcss/forms')],

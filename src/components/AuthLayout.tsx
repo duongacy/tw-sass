@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import backgroundImage from '@/images/background-auth.jpg'
-export function AuthLayout({ children }: any) {
+import { FC, ReactNode } from 'react'
+
+export interface AuthLayoutProps {
+  children: ReactNode
+}
+export const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
   return (
     <>
       <div className="relative flex min-h-full justify-center md:px-12 lg:px-0">
