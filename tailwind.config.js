@@ -1,5 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -26,7 +26,10 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        display: [
+          'Lexend',
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       maxWidth: {
         '2xl': '40rem',
@@ -38,8 +41,9 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       neutral: colors.gray,
-      slate: colors.slate,
+      secondary: colors.slate,
       primary: colors.blue,
+
       info: '',
       success: '',
       error: '',
@@ -47,4 +51,4 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms')],
-}
+};

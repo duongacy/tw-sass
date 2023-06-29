@@ -1,9 +1,12 @@
-import { AuthLayout } from '@/components/AuthLayout'
-import { Button } from '@/components/Button'
-import { TextField, SelectField } from '@/components/Fields'
-import { Logo } from '@/components/Logo'
-import Head from 'next/head'
-import Link from 'next/link'
+import { AuthLayout } from '@/components/AuthLayout';
+import { Button } from '@/components/Button';
+import {
+  TextField,
+  SelectField,
+} from '@/components/Fields';
+import { Logo } from '@/components/Logo';
+import Head from 'next/head';
+import Link from 'next/link';
 const Register = () => {
   return (
     <>
@@ -11,66 +14,69 @@ const Register = () => {
         <title>Sign Up - TaxPal</title>
       </Head>
       <AuthLayout>
-        <div className="grid gap-16">
-          <Link href="/" aria-label="Home">
-            <Logo className="h-10 w-auto" />
+        <div className='grid gap-16'>
+          <Link href='/' aria-label='Home'>
+            <Logo className='h-10 w-auto' />
           </Link>
-          <div className="grid gap-2">
-            <h2 className="text-lg font-semibold text-neutral-900">
+          <div className='grid gap-2'>
+            <h4 className='font-semibold text-neutral-900'>
               Get started for free
-            </h2>
-            <p className="text-sm text-neutral-700">
+            </h4>
+            <small className=' text-neutral-700'>
               Already registered?{' '}
               <Link
-                href="/login"
-                className="font-medium text-primary-600 hover:underline"
+                href='/login'
+                className='font-medium text-primary-600 hover:underline'
               >
                 Sign in
               </Link>{' '}
               to your account.
-            </p>
+            </small>
           </div>
         </div>
-        <form action="#" className="mt-10 grid gap-6 sm:grid-cols-2">
+        <form
+          action='#'
+          className='mt-10 grid gap-6 sm:grid-cols-2'
+        >
           <TextField
-            label="First name"
-            id="first_name"
-            name="first_name"
-            type="text"
-            autoComplete="given-name"
+            label='First name'
+            id='first_name'
+            name='first_name'
+            type='text'
+            autoComplete='given-name'
             required
           />
           <TextField
-            label="Last name"
-            id="last_name"
-            name="last_name"
-            type="text"
-            autoComplete="family-name"
+            label='Last name'
+            id='last_name'
+            name='last_name'
+            type='text'
+            autoComplete='family-name'
             required
           />
           <TextField
-            className="col-span-full"
-            label="Email address"
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
+            className='col-span-full'
+            label='Email address'
+            id='email'
+            name='email'
+            type='email'
+            autoComplete='email'
             required
           />
           <TextField
-            className="col-span-full"
-            label="Password"
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="new-password"
+            className='col-span-full'
+            label='Password'
+            id='password'
+            name='password'
+            type='password'
+            autoComplete='new-password'
             required
           />
           <SelectField
-            className="col-span-full"
-            label="How did you hear about us?"
-            id="referral_source"
-            name="referral_source"
+            className='col-span-full'
+            label='How did you hear about us?'
+            id='referral_source'
+            name='referral_source'
           >
             <option>AltaVista search</option>
             <option>Super Bowl commercial</option>
@@ -78,19 +84,19 @@ const Register = () => {
             <option>The “Never Use This” podcast</option>
           </SelectField>
           <Button
-            type="submit"
-            variant="solid"
-            color="blue"
-            className="col-span-full"
+            type='submit'
+            variant='solid'
+            color='primary'
+            className='col-span-full'
             href={undefined}
           >
             <span>
-              Sign up <span aria-hidden="true">&rarr;</span>
+              Sign up <span aria-hidden='true'>&rarr;</span>
             </span>
           </Button>
         </form>
       </AuthLayout>
     </>
-  )
-}
-export default Register
+  );
+};
+export default Register;

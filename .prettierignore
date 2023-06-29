@@ -1,0 +1,7 @@
+.next
+node_modules
+.eslintrc.json
+LICENSE.md
+package-lock.json
+package.json
+README.md

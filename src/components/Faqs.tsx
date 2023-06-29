@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import backgroundImage from '@/images/background-faqs.jpg'
-import { Container } from './Container'
+import Image from 'next/image';
+import backgroundImage from '@/images/background-faqs.jpg';
+import { Container } from './Container';
 const faqs = [
   [
     {
@@ -9,8 +9,10 @@ const faqs = [
         'Well no, but if you move your company offshore you can probably ignore it.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question:
+        'Can I pay for my subscription via purchase order?',
+      answer:
+        'Absolutely, we are happy to take your money in all forms.',
     },
     {
       question: 'How do I apply for a job at TaxPal?',
@@ -20,7 +22,8 @@ const faqs = [
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question:
+        'What was that testimonial about tax fraud all about?',
       answer:
         'TaxPal is just a software application, ultimately your books are your responsibility.',
     },
@@ -45,56 +48,64 @@ const faqs = [
     },
     {
       question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
+      answer:
+        'In life it’s really better to never expect anything at all.',
     },
     {
-      question: 'I lost my password, how do I get into my account?',
+      question:
+        'I lost my password, how do I get into my account?',
       answer:
         'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
     },
   ],
-]
+];
 export function Faqs() {
   return (
     <section
-      id="faq"
-      aria-labelledby="faq-title"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
+      id='faq'
+      aria-labelledby='faq-title'
+      className='relative overflow-hidden bg-secondary-50 py-20 sm:py-32'
     >
       <Image
-        className="absolute left-1/2 top-0 max-w-none -translate-y-1/4 translate-x-[-30%]"
+        className='absolute left-1/2 top-0 max-w-none -translate-y-1/4 translate-x-[-30%]'
         src={backgroundImage}
-        alt=""
+        alt=''
         width={1558}
         height={946}
         unoptimized
       />
-      <Container className="relative">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <Container className='relative'>
+        <div className='mx-auto max-w-2xl lg:mx-0'>
           <h2
-            id="faq-title"
-            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
+            id='faq-title'
+            className='font-display tracking-tight text-secondary-900'
           >
             Frequently asked questions
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
-          </p>
+          <h4 className='mt-4 tracking-tight text-secondary-700'>
+            If you can’t find what you’re looking for, email
+            our support team and if you’re lucky someone
+            will get back to you.
+          </h4>
         </div>
         <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
+          role='list'
+          className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3'
         >
           {faqs.map((column, columnIndex) => (
             <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-8">
+              <ul
+                role='list'
+                className='flex flex-col gap-y-8'
+              >
                 {column.map((faq, faqIndex) => (
                   <li key={faqIndex}>
-                    <h3 className="font-display text-lg leading-7 text-slate-900">
+                    <h4 className='font-display leading-7 text-secondary-900'>
                       {faq.question}
-                    </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+                    </h4>
+                    <small className='mt-4 text-secondary-700'>
+                      {faq.answer}
+                    </small>
                   </li>
                 ))}
               </ul>
@@ -103,5 +114,5 @@ export function Faqs() {
         </ul>
       </Container>
     </section>
-  )
+  );
 }
