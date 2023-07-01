@@ -4,6 +4,13 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname:'localhost',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

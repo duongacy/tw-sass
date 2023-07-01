@@ -2,7 +2,7 @@ import { CallToAction } from '@/components/CallToAction';
 import { Faqs } from '@/components/Faqs';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
-import { Hero } from '@/components/Hero';
+import { HeroComponent } from '@/components/Hero';
 import { Pricing } from '@/components/Pricing';
 import { PrimaryFeatures } from '@/components/PrimaryFeatures';
 import { SecondaryFeatures } from '@/components/SecondaryFeatures';
@@ -32,7 +32,7 @@ const Home: NextPage<HomeProps> = () => {
       </Head>
       <Header />
       <main>
-        <Hero />
+        <HeroComponent />
         <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />
@@ -52,7 +52,6 @@ export const getStaticProps: GetStaticProps<
   const res1 = axios.get(
     'https://api.github.com/repos/vercel/next.js'
   );
-  // const res = await fetch('https://api.github.com/repos/vercel/next.js')
   const repo = (await res1).data;
   return { props: { repo } };
 };

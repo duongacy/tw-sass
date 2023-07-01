@@ -1,64 +1,8 @@
 import Image from 'next/image';
 import backgroundImage from '@/images/background-faqs.jpg';
 import { Container } from './Container';
-const faqs = [
-  [
-    {
-      question: 'Does TaxPal handle VAT?',
-      answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
-    },
-    {
-      question:
-        'Can I pay for my subscription via purchase order?',
-      answer:
-        'Absolutely, we are happy to take your money in all forms.',
-    },
-    {
-      question: 'How do I apply for a job at TaxPal?',
-      answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
-    },
-  ],
-  [
-    {
-      question:
-        'What was that testimonial about tax fraud all about?',
-      answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
-    },
-    {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-      answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-    },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-    },
-  ],
-  [
-    {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-    },
-    {
-      question: 'Can we expect more inventory features?',
-      answer:
-        'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question:
-        'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-    },
-  ],
-];
+import {v4} from 'uuid'
+
 export function Faqs() {
   return (
     <section
@@ -88,30 +32,38 @@ export function Faqs() {
             will get back to you.
           </h4>
         </div>
-        <ul
-          role='list'
-          className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3'
-        >
-          {faqs.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul
-                role='list'
-                className='flex flex-col gap-y-8'
-              >
-                {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h4 className='font-display leading-7 text-secondary-900'>
-                      {faq.question}
-                    </h4>
-                    <small className='mt-4 text-secondary-700'>
-                      {faq.answer}
-                    </small>
-                  </li>
-                ))}
-              </ul>
-            </li>
+        <div className='mt-16 grid grid-cols-[repeat(auto-fit,minmax(340px,auto))] gap-8'>
+          {Array.from({ length: 8 }).map((i) => (
+            <div key={v4()}>
+              <h4 className='font-display leading-7 text-secondary-900'>
+                Does TaxPal handle VAT?
+              </h4>
+              <small className='mt-3 text-secondary-700'>
+                Well no, but if you move your company
+                offshore you can probably ignore it.
+              </small>
+            </div>
           ))}
-        </ul>
+        </div>
+        <button
+            data-tooltip-target='tooltip-light'
+            data-tooltip-style='light'
+            type='button'
+            className='bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:outline-none focus:ring-4'
+          >
+            Light tooltip
+          </button>
+          <div
+            id='tooltip-light'
+            role='tooltip'
+            className='text-neutral-900 border-neutral-200 tooltip invisible absolute z-10 inline-block rounded-lg border bg-white px-3 py-2 text-sm font-medium opacity-0 shadow-sm'
+          >
+            Tooltip content
+            <div
+              className='tooltip-arrow'
+              data-popper-arrow
+            ></div>
+          </div>
       </Container>
     </section>
   );
