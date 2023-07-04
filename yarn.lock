@@ -36,6 +36,11 @@
   dependencies:
     client-only "^0.0.1"
 
+"@heroicons/react@^2.0.18":
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-2.0.18.tgz#f80301907c243df03c7e9fd76c0286e95361f7c1"
+  integrity sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==
+
 "@humanwhocodes/config-array@^0.11.6":
   version "0.11.10"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.10.tgz"
@@ -2100,14 +2105,14 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier-plugin-tailwindcss@^0.2.6:
-  version "0.2.8"
-  resolved "https://registry.npmjs.org/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.2.8.tgz"
-  integrity sha512-KgPcEnJeIijlMjsA6WwYgRs5rh3/q76oInqtMXBA/EMcamrcYJpyhtRhyX1ayT9hnHlHTuO8sIifHF10WuSDKg==
+prettier-plugin-tailwindcss@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.3.0.tgz#8299b307c7f6467f52732265579ed9375be6c818"
+  integrity sha512-009/Xqdy7UmkcTBpwlq7jsViDqXAYSOMLDrHAdTMlVZOrKfM2o9Ci7EMWTMZ7SkKBFTG04UM9F9iM2+4i6boDA==
 
-prettier@^2.8.7:
+prettier@^2.8.8:
   version "2.8.8"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.8.tgz"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
 prop-types@^15.8.1:
@@ -2620,9 +2625,9 @@ typed-array-length@^1.0.4:
     is-typed-array "^1.1.9"
 
 typescript@5.1.0:
-  version "5.2.0-dev.20230701"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230701.tgz#591305ee64b6ca0789c3e37fc60c812f9bd7475f"
-  integrity sha512-ay607P1LNDtKi+hN0GEpsxsUa1g/3KGqzo1nvvcTPBvCz7xmxwcdZAdz8nJZh1JJdfu+6jBkAQ6XuKK08zvIUw==
+  version "5.2.0-dev.20230703"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230703.tgz#6f0b8b31ec2a5f0608d71975a4e32b62cae9a412"
+  integrity sha512-O+fL935EQoj276onbuLMys21Pew2AlvZNDqzkw6TXq/BDGoAeUTsxfLQID9o+tKEciOIxdLaZnMF8WXulVMfow==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

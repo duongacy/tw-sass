@@ -32,14 +32,15 @@ export function PrimaryFeatures() {
     };
   }, []);
 
-  const { data:primaryFeatures }=  useQueryCustom<PrimaryFeatures>('/primary-features', {
-    populate: {
-      features:{
-        populate: { image: { populate: '*' } },
-      }
-    },
-  });
-  
+  const { data: primaryFeatures } =
+    useQueryCustom<PrimaryFeatures>('/primary-features', {
+      populate: {
+        features: {
+          populate: { image: { populate: '*' } },
+        },
+      },
+    });
+
   return (
     <section
       id='features'
@@ -60,7 +61,7 @@ export function PrimaryFeatures() {
             {primaryFeatures?.data.attributes.title}
           </h2>
           <h4 className='mt-6 tracking-tight text-primary-100'>
-           {primaryFeatures?.data.attributes.description}
+            {primaryFeatures?.data.attributes.description}
           </h4>
         </div>
         <Tab.Group
@@ -112,39 +113,41 @@ export function PrimaryFeatures() {
                 </Tab.List>
               </div>
               <Tab.Panels className='lg:col-span-7'>
-                {primaryFeatures?.data.attributes.features.data?.map((feature) => (
-                  <Tab.Panel
-                    key={feature.attributes.title}
-                    unmount={false}
-                  >
-                    <div className='relative sm:px-6 lg:hidden'>
-                      <div className='absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl' />
-                      <p className='relative mx-auto max-w-2xl text-white sm:text-center'>
-                        {feature.attributes.description}
-                      </p>
-                    </div>
-                    <div className='mt-10 w-[45rem] overflow-hidden rounded-xl bg-secondary-50 shadow-xl shadow-primary-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]'>
-                      <Image
-                        src={
-                          process.env
-                            .NEXT_PUBLIC_STRAPI_API_URL +
-                          feature.attributes.image.data
-                            .attributes.url
-                        }
-                        width={
-                          feature.attributes.image.data
-                            .attributes.width
-                        }
-                        height={
-                          feature.attributes.image.data
-                            .attributes.height
-                        }
-                        alt=''
-                        priority
-                      />
-                    </div>
-                  </Tab.Panel>
-                ))}
+                {primaryFeatures?.data.attributes.features.data?.map(
+                  (feature) => (
+                    <Tab.Panel
+                      key={feature.attributes.title}
+                      unmount={false}
+                    >
+                      <div className='relative sm:px-6 lg:hidden'>
+                        <div className='absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl' />
+                        <p className='relative mx-auto max-w-2xl text-white sm:text-center'>
+                          {feature.attributes.description}
+                        </p>
+                      </div>
+                      <div className='mt-10 w-[45rem] overflow-hidden rounded-xl bg-secondary-50 shadow-xl shadow-primary-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]'>
+                        <Image
+                          src={
+                            process.env
+                              .NEXT_PUBLIC_STRAPI_API_URL +
+                            feature.attributes.image.data
+                              .attributes.url
+                          }
+                          width={
+                            feature.attributes.image.data
+                              .attributes.width
+                          }
+                          height={
+                            feature.attributes.image.data
+                              .attributes.height
+                          }
+                          alt=''
+                          priority
+                        />
+                      </div>
+                    </Tab.Panel>
+                  )
+                )}
               </Tab.Panels>
             </>
           )}

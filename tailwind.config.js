@@ -40,10 +40,9 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      neutral: colors.gray,
+      neutral: colors.slate,
       secondary: colors.slate,
-      primary: colors.blue,
-
+      primary: colors.indigo,
       info: '',
       success: '',
       error: '',

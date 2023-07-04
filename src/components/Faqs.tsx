@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import backgroundImage from '@/images/background-faqs.jpg';
 import { Container } from './Container';
-import {v4} from 'uuid'
+import { v4 } from 'uuid';
 
 export function Faqs() {
   return (
@@ -46,24 +46,24 @@ export function Faqs() {
           ))}
         </div>
         <button
-            data-tooltip-target='tooltip-light'
-            data-tooltip-style='light'
-            type='button'
-            className='bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:outline-none focus:ring-4'
-          >
-            Light tooltip
-          </button>
+          data-tooltip-target='tooltip-light'
+          data-tooltip-style='light'
+          type='button'
+          className='rounded-lg bg-primary-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'
+        >
+          Light tooltip
+        </button>
+        <div
+          id='tooltip-light'
+          role='tooltip'
+          className='tooltip invisible absolute z-10 inline-block rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm font-medium text-neutral-900 opacity-0 shadow-sm'
+        >
+          Tooltip content
           <div
-            id='tooltip-light'
-            role='tooltip'
-            className='text-neutral-900 border-neutral-200 tooltip invisible absolute z-10 inline-block rounded-lg border bg-white px-3 py-2 text-sm font-medium opacity-0 shadow-sm'
-          >
-            Tooltip content
-            <div
-              className='tooltip-arrow'
-              data-popper-arrow
-            ></div>
-          </div>
+            className='tooltip-arrow'
+            data-popper-arrow
+          ></div>
+        </div>
       </Container>
     </section>
   );
