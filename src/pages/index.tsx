@@ -1,4 +1,4 @@
-import { CallToAction } from '@/components/CallToAction';
+import { CallToActionComponent } from '@/components/CallToAction';
 import { Faqs } from '@/components/Faqs';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
@@ -6,7 +6,7 @@ import { HeroComponent } from '@/components/Hero';
 import { Pricing } from '@/components/Pricing';
 import { PrimaryFeatures } from '@/components/PrimaryFeatures';
 import { SecondaryFeatures } from '@/components/SecondaryFeatures';
-import { Testimonials } from '@/components/Testimonials';
+import { TestimonialsComponent } from '@/components/TestimonialsComponent';
 import axios from 'axios';
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
@@ -35,8 +35,8 @@ const Home: NextPage<HomeProps> = () => {
         <HeroComponent />
         <PrimaryFeatures />
         <SecondaryFeatures />
-        <CallToAction />
-        <Testimonials />
+        <CallToActionComponent />
+        {/* <TestimonialsComponent /> */}
         <Pricing />
         <Faqs />
       </main>

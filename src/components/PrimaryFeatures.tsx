@@ -1,6 +1,6 @@
 import { useQueryCustom } from '@/api';
 import backgroundImage from '@/images/background-features.jpg';
-import { PrimaryFeatures } from '@/types/collection/feature';
+import { PrimaryFeatures } from '@/types/single/primary-features';
 import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
 import Image from 'next/image';

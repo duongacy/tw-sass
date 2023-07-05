@@ -8,11 +8,3 @@ export type Feature = DataCover<{
 }>;
 
 export type GetAllFeatureParams = any;
-
-export type PrimaryFeatures = DataCover<{
-  title: string;
-  description: string;
-  features: {
-    data: Feature[];
-  };
-}>;

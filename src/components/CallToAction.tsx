@@ -1,9 +1,18 @@
+import { useQueryCustom } from '@/api';
+import { CallToAction } from '@/types/single/call-to-action';
 import Image from 'next/image';
-import backgroundImage from '@/images/background-call-to-action.jpg';
-import { Container } from './Container';
 import { Button } from './Button';
+import { Container } from './Container';
 
-export function CallToAction() {
+export const CallToActionComponent = () => {
+  const { data: callToActionQuery } =
+    useQueryCustom<CallToAction>('/call-to-action', {
+      populate: {
+        background: {
+          populate: '*',
+        },
+      },
+    });
   return (
     <section
       id='get-started-today'
@@ -11,31 +20,42 @@ export function CallToAction() {
     >
       <Image
         className='absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2'
-        src={backgroundImage}
-        alt=''
-        width={2347}
-        height={1244}
+        src={
+          process.env.NEXT_PUBLIC_STRAPI_API_URL +
+          (callToActionQuery?.data.attributes.background
+            .data.attributes.url ?? '')
+        }
+        alt={
+          callToActionQuery?.data.attributes.background.data
+            .attributes.alternativeText ?? ''
+        }
+        width={
+          callToActionQuery?.data.attributes.background.data
+            .attributes.width ?? 0
+        }
+        height={
+          callToActionQuery?.data.attributes.background.data
+            .attributes.height ?? 0
+        }
         unoptimized
       />
       <Container className='relative'>
         <div className='mx-auto max-w-lg text-center'>
           <h2 className='font-display tracking-tight text-white'>
-            Get started today
+            {callToActionQuery?.data.attributes.title}
           </h2>
           <h4 className='mt-4 tracking-tight text-white'>
-            It’s time to take control of your books. Buy our
-            software so you can feel like you’re doing
-            something productive.
+            {callToActionQuery?.data.attributes.description}
           </h4>
           <Button
             href='/register'
             color='white'
             className='mt-10'
           >
-            Get 6 months free
+            {callToActionQuery?.data.attributes.buttonText}
           </Button>
         </div>
       </Container>
     </section>
   );
-}
+};
