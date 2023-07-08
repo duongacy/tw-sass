@@ -2625,9 +2625,9 @@ typed-array-length@^1.0.4:
     is-typed-array "^1.1.9"
 
 typescript@5.1.0:
-  version "5.2.0-dev.20230703"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230703.tgz#6f0b8b31ec2a5f0608d71975a4e32b62cae9a412"
-  integrity sha512-O+fL935EQoj276onbuLMys21Pew2AlvZNDqzkw6TXq/BDGoAeUTsxfLQID9o+tKEciOIxdLaZnMF8WXulVMfow==
+  version "5.2.0-dev.20230707"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230707.tgz#47abdc402fbcb24c97b37091621258bd41dac01f"
+  integrity sha512-uVIbqrU5EP4PAZfnN3VdGJ0B4wkmyzz/GbBfXbBBvp9YUdwvgZK0jM24LEgO8Cjes0sQf6gV16Dc6WiqCKLPGQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
