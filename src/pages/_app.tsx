@@ -8,6 +8,7 @@ import {
 
 import type { AppProps } from 'next/app';
 import { useState, JSX } from 'react';
+import { ImageProvider } from '@/contexts/VirtualContext';
 
 export default function App({
   Component,
@@ -17,7 +18,9 @@ export default function App({
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <Component {...pageProps} />
+        <ImageProvider>
+          <Component {...pageProps} />
+        </ImageProvider>
       </Hydrate>
     </QueryClientProvider>
   );
