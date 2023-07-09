@@ -8,6 +8,7 @@ import {
 
 import type { AppProps } from 'next/app';
 import { useState, JSX } from 'react';
+import { ThemeProvider } from 'next-themes';
 
 export default function App({
   Component,
@@ -15,10 +16,12 @@ export default function App({
 }: AppProps): JSX.Element {
   const [queryClient] = useState(() => new QueryClient());
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
-        <Component {...pageProps} />
-      </Hydrate>
-    </QueryClientProvider>
+    <ThemeProvider attribute='class'>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <Component {...pageProps} />
+        </Hydrate>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }

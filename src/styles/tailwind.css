@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
+  div {
+    @apply text-black;
+  }
+
+  *:not(div) {
+    @apply text-inherit;
+  }
+
+  /* h1 {
     @apply text-5xl sm:text-7xl;
   }
   h2 {
@@ -20,8 +28,9 @@
   }
   small {
     @apply block text-sm;
-  }
+  } */
 }
+
 #__next {
   min-height: 100%;
 }
