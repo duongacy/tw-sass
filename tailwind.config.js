@@ -1,9 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
-const withMT = require('@material-tailwind/react/utils/withMT');
 
-module.exports = withMT({
-  darkMode: 'class',
+module.exports = {
+  // darkMode: 'class',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extends: {
@@ -54,7 +53,10 @@ module.exports = withMT({
       error: '',
       warning: '',
       inherit: 'inherit',
+
+      bkg: 'hsl(var(--color-bkg) / <alpha-value>)',
+      content: 'hsl(var(--color-content) / <alpha-value>)',
     },
   },
   plugins: [require('@tailwindcss/forms')],
-});
+};
