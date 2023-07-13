@@ -14,7 +14,5 @@ export const HeroComponent = () => {
   );
   const heroAttributes = heroQuery?.data.attributes;
 
-  return (
-    <></>
-  );
+  return <></>;
 };

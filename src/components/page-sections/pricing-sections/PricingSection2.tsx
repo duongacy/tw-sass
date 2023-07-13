@@ -66,14 +66,14 @@ export const PricingSection2: FC<PricingSectionProps> = ({
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-4xl text-center'>
-          <h2 className='text-primary-600 text-base font-semibold leading-7'>
+          <h2 className='text-base font-semibold leading-7 text-primary-600'>
             Pricing
           </h2>
-          <p className='text-neutral-900 mt-2 text-4xl font-bold tracking-tight sm:text-5xl'>
+          <p className='mt-2 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl'>
             Pricing plans for teams of&nbsp;all&nbsp;sizes
           </p>
         </div>
-        <p className='text-neutral-600 mx-auto mt-6 max-w-2xl text-center text-lg leading-8'>
+        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-600'>
           Distinctio et nulla eum soluta et neque labore
           quibusdam. Saepe et quasi iusto modi velit ut non
           voluptas in. Explicabo id ut laborum.
@@ -90,7 +90,7 @@ export const PricingSection2: FC<PricingSectionProps> = ({
                 tierIdx === tiers.length - 1
                   ? 'lg:rounded-l-none'
                   : '',
-                'ring-neutral-200 flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 xl:p-10'
+                'flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-neutral-200 xl:p-10'
               )}
             >
               <div>
@@ -107,25 +107,25 @@ export const PricingSection2: FC<PricingSectionProps> = ({
                     {tier.name}
                   </h3>
                   {tier.mostPopular ? (
-                    <p className='bg-primary-600/10 text-primary-600 rounded-full px-2.5 py-1 text-xs font-semibold leading-5'>
+                    <p className='rounded-full bg-primary-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-primary-600'>
                       Most popular
                     </p>
                   ) : null}
                 </div>
-                <p className='text-neutral-600 mt-4 text-sm leading-6'>
+                <p className='mt-4 text-sm leading-6 text-neutral-600'>
                   {tier.description}
                 </p>
                 <p className='mt-6 flex items-baseline gap-x-1'>
-                  <span className='text-neutral-900 text-4xl font-bold tracking-tight'>
+                  <span className='text-4xl font-bold tracking-tight text-neutral-900'>
                     {tier.priceMonthly}
                   </span>
-                  <span className='text-neutral-600 text-sm font-semibold leading-6'>
+                  <span className='text-sm font-semibold leading-6 text-neutral-600'>
                     /month
                   </span>
                 </p>
                 <ul
                   role='list'
-                  className='text-neutral-600 mt-8 space-y-3 text-sm leading-6'
+                  className='mt-8 space-y-3 text-sm leading-6 text-neutral-600'
                 >
                   {tier.features.map((feature) => (
                     <li
@@ -133,7 +133,7 @@ export const PricingSection2: FC<PricingSectionProps> = ({
                       className='flex gap-x-3'
                     >
                       <CheckIcon
-                        className='text-primary-600 h-6 w-5 flex-none'
+                        className='h-6 w-5 flex-none text-primary-600'
                         aria-hidden='true'
                       />
                       {feature}
@@ -146,9 +146,9 @@ export const PricingSection2: FC<PricingSectionProps> = ({
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular
-                    ? 'bg-primary-600 hover:bg-primary-500 text-white shadow-sm'
-                    : 'text-primary-600 ring-primary-200 hover:ring-primary-300 ring-1 ring-inset',
-                  'focus-visible:outline-primary-600 mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
+                    ? 'bg-primary-600 text-white shadow-sm hover:bg-primary-500'
+                    : 'text-primary-600 ring-1 ring-inset ring-primary-200 hover:ring-primary-300',
+                  'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600'
                 )}
               >
                 Buy plan

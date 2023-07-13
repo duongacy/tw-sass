@@ -87,14 +87,14 @@ export const PricingSection4: FC<PricingSectionProps> = ({
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-4xl text-center'>
-          <h2 className='text-primary-600 text-base font-semibold leading-7'>
+          <h2 className='text-base font-semibold leading-7 text-primary-600'>
             Pricing
           </h2>
-          <p className='text-neutral-900 mt-2 text-4xl font-bold tracking-tight sm:text-5xl'>
+          <p className='mt-2 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl'>
             Pricing plans for teams of all sizes
           </p>
         </div>
-        <p className='text-neutral-600 mx-auto mt-6 max-w-2xl text-center text-lg leading-8'>
+        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-600'>
           Distinctio et nulla eum soluta et neque labore
           quibusdam. Saepe et quasi iusto modi velit ut non
           voluptas in. Explicabo id ut laborum.
@@ -103,7 +103,7 @@ export const PricingSection4: FC<PricingSectionProps> = ({
           <RadioGroup
             value={frequency}
             onChange={setFrequency}
-            className='ring-neutral-200 grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs font-semibold leading-5 ring-1 ring-inset'
+            className='grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs font-semibold leading-5 ring-1 ring-inset ring-neutral-200'
           >
             <RadioGroup.Label className='sr-only'>
               Payment frequency
@@ -190,7 +190,7 @@ export const PricingSection4: FC<PricingSectionProps> = ({
                 className={classNames(
                   tier.featured
                     ? 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white'
-                    : 'bg-primary-600 hover:bg-primary-500 focus-visible:outline-primary-600 text-white shadow-sm',
+                    : 'bg-primary-600 text-white shadow-sm hover:bg-primary-500 focus-visible:outline-primary-600',
                   'mt-6 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                 )}
               >

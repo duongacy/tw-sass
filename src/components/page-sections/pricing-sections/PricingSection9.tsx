@@ -132,14 +132,14 @@ export const PricingSection9: FC<PricingSectionProps> = ({
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-4xl text-center'>
-          <h2 className='text-primary-600 text-base font-semibold leading-7'>
+          <h2 className='text-base font-semibold leading-7 text-primary-600'>
             Pricing
           </h2>
-          <p className='text-neutral-900 mt-2 text-4xl font-bold tracking-tight sm:text-5xl'>
+          <p className='mt-2 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl'>
             Plans for teams of&nbsp;all&nbsp;sizes
           </p>
         </div>
-        <p className='text-neutral-600 mx-auto mt-6 max-w-2xl text-center text-lg leading-8'>
+        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-600'>
           Distinctio et nulla eum soluta et neque labore
           quibusdam. Saepe et quasi iusto modi velit ut non
           voluptas in. Explicabo id ut laborum.
@@ -152,18 +152,18 @@ export const PricingSection9: FC<PricingSectionProps> = ({
               key={tier.id}
               className={classNames(
                 tier.mostPopular
-                  ? 'bg-neutral-400/5 ring-neutral-200 rounded-xl ring-1 ring-inset'
+                  ? 'rounded-xl bg-neutral-400/5 ring-1 ring-inset ring-neutral-200'
                   : '',
                 'p-8'
               )}
             >
               <h3
                 id={tier.id}
-                className='text-neutral-900 text-sm font-semibold leading-6'
+                className='text-sm font-semibold leading-6 text-neutral-900'
               >
                 {tier.name}
               </h3>
-              <p className='text-neutral-900 mt-2 flex items-baseline gap-x-1'>
+              <p className='mt-2 flex items-baseline gap-x-1 text-neutral-900'>
                 <span className='text-4xl font-bold'>
                   {tier.priceMonthly}
                 </span>
@@ -176,16 +176,16 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular
-                    ? 'bg-primary-600 hover:bg-primary-500 text-white'
-                    : 'text-primary-600 ring-primary-200 hover:ring-primary-300 ring-1 ring-inset',
-                  'focus-visible:outline-primary-600 mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
+                    ? 'bg-primary-600 text-white hover:bg-primary-500'
+                    : 'text-primary-600 ring-1 ring-inset ring-primary-200 hover:ring-primary-300',
+                  'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600'
                 )}
               >
                 Buy plan
               </a>
               <ul
                 role='list'
-                className='text-neutral-900 mt-10 space-y-4 text-sm leading-6'
+                className='mt-10 space-y-4 text-sm leading-6 text-neutral-900'
               >
                 {sections.map((section) => (
                   <li key={section.name}>
@@ -198,7 +198,7 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                               className='flex gap-x-3'
                             >
                               <CheckIcon
-                                className='text-primary-600 h-6 w-5 flex-none'
+                                className='h-6 w-5 flex-none text-primary-600'
                                 aria-hidden='true'
                               />
                               <span>
@@ -206,7 +206,7 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                                 {typeof feature.tiers[
                                   tier.name
                                 ] === 'string' ? (
-                                  <span className='text-neutral-500 text-sm leading-6'>
+                                  <span className='text-sm leading-6 text-neutral-500'>
                                     (
                                     {
                                       feature.tiers[
@@ -246,7 +246,7 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                     }%`,
                   }}
                 >
-                  <div className='border-neutral-900/10 bg-neutral-400/5 w-full rounded-t-xl border-x border-t' />
+                  <div className='w-full rounded-t-xl border-x border-t border-neutral-900/10 bg-neutral-400/5' />
                 </div>
               </div>
             ) : null}
@@ -269,7 +269,7 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                       scope='col'
                       className='px-6 pt-6 xl:px-8 xl:pt-8'
                     >
-                      <div className='text-neutral-900 text-sm font-semibold leading-7'>
+                      <div className='text-sm font-semibold leading-7 text-neutral-900'>
                         {tier.name}
                       </div>
                     </th>
@@ -286,7 +286,7 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                       key={tier.id}
                       className='px-6 pt-2 xl:px-8'
                     >
-                      <div className='text-neutral-900 flex items-baseline gap-x-1'>
+                      <div className='flex items-baseline gap-x-1 text-neutral-900'>
                         <span className='text-4xl font-bold'>
                           {tier.priceMonthly}
                         </span>
@@ -298,9 +298,9 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                         href={tier.href}
                         className={classNames(
                           tier.mostPopular
-                            ? 'bg-primary-600 hover:bg-primary-500 text-white'
-                            : 'text-primary-600 ring-primary-200 hover:ring-primary-300 ring-1 ring-inset',
-                          'focus-visible:outline-primary-600 mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
+                            ? 'bg-primary-600 text-white hover:bg-primary-500'
+                            : 'text-primary-600 ring-1 ring-inset ring-primary-200 hover:ring-primary-300',
+                          'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600'
                         )}
                       >
                         Buy plan
@@ -319,11 +319,11 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                             sectionIdx === 0
                               ? 'pt-8'
                               : 'pt-16',
-                            'text-neutral-900 pb-4 text-sm font-semibold leading-6'
+                            'pb-4 text-sm font-semibold leading-6 text-neutral-900'
                           )}
                         >
                           {section.name}
-                          <div className='bg-neutral-900/10 absolute inset-x-8 mt-4 h-px' />
+                          <div className='absolute inset-x-8 mt-4 h-px bg-neutral-900/10' />
                         </th>
                       </tr>
                       {section.features.map(
@@ -331,10 +331,10 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                           <tr key={feature.name}>
                             <th
                               scope='row'
-                              className='text-neutral-900 py-4 text-sm font-normal leading-6'
+                              className='py-4 text-sm font-normal leading-6 text-neutral-900'
                             >
                               {feature.name}
-                              <div className='bg-neutral-900/5 absolute inset-x-8 mt-4 h-px' />
+                              <div className='absolute inset-x-8 mt-4 h-px bg-neutral-900/5' />
                             </th>
                             {tiers.map((tier: any) => (
                               <td
@@ -344,7 +344,7 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                                 {typeof feature.tiers[
                                   tier.name
                                 ] === 'string' ? (
-                                  <div className='text-neutral-500 text-center text-sm leading-6'>
+                                  <div className='text-center text-sm leading-6 text-neutral-500'>
                                     {
                                       feature.tiers[
                                         tier.name
@@ -357,12 +357,12 @@ export const PricingSection9: FC<PricingSectionProps> = ({
                                       tier.name
                                     ] === true ? (
                                       <CheckIcon
-                                        className='text-primary-600 mx-auto h-5 w-5'
+                                        className='mx-auto h-5 w-5 text-primary-600'
                                         aria-hidden='true'
                                       />
                                     ) : (
                                       <MinusIcon
-                                        className='text-neutral-400 mx-auto h-5 w-5'
+                                        className='mx-auto h-5 w-5 text-neutral-400'
                                         aria-hidden='true'
                                       />
                                     )}

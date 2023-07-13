@@ -19,7 +19,7 @@
     }
   } */
 
-  :root[data-theme="dark"] {
+  :root[data-theme='dark'] {
     --color-bkg: 217deg 32.6% 57.5%;
     --color-content: 210deg 40% 98%;
     --color-accent1: 288deg 95.8% 60.6%;

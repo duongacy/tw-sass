@@ -66,14 +66,14 @@ export const PricingSection12: FC<PricingSectionProps> = ({
         />
       </div>
       <div className='mx-auto max-w-2xl text-center lg:max-w-4xl'>
-        <h2 className='text-primary-600 text-base font-semibold leading-7'>
+        <h2 className='text-base font-semibold leading-7 text-primary-600'>
           Pricing
         </h2>
-        <p className='text-neutral-900 mt-2 text-4xl font-bold tracking-tight sm:text-5xl'>
+        <p className='mt-2 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl'>
           The right price for you, whoever you are
         </p>
       </div>
-      <p className='text-neutral-600 mx-auto mt-6 max-w-2xl text-center text-lg leading-8'>
+      <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-600'>
         Qui iusto aut est earum eos quae. Eligendi est at
         nam aliquid ad quo reprehenderit in aliquid fugiat
         dolorum voluptatibus.
@@ -91,34 +91,34 @@ export const PricingSection12: FC<PricingSectionProps> = ({
                 : tierIdx === 0
                 ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl lg:rounded-tr-none'
                 : 'sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl',
-              'ring-neutral-900/10 rounded-3xl p-8 ring-1 sm:p-10'
+              'rounded-3xl p-8 ring-1 ring-neutral-900/10 sm:p-10'
             )}
           >
             <h3
               id={tier.id}
-              className='text-primary-600 text-base font-semibold leading-7'
+              className='text-base font-semibold leading-7 text-primary-600'
             >
               {tier.name}
             </h3>
             <p className='mt-4 flex items-baseline gap-x-2'>
-              <span className='text-neutral-900 text-5xl font-bold tracking-tight'>
+              <span className='text-5xl font-bold tracking-tight text-neutral-900'>
                 {tier.priceMonthly}
               </span>
-              <span className='text-neutral-500 text-base'>
+              <span className='text-base text-neutral-500'>
                 /month
               </span>
             </p>
-            <p className='text-neutral-600 mt-6 text-base leading-7'>
+            <p className='mt-6 text-base leading-7 text-neutral-600'>
               {tier.description}
             </p>
             <ul
               role='list'
-              className='text-neutral-600 mt-8 space-y-3 text-sm leading-6 sm:mt-10'
+              className='mt-8 space-y-3 text-sm leading-6 text-neutral-600 sm:mt-10'
             >
               {tier.features.map((feature) => (
                 <li key={feature} className='flex gap-x-3'>
                   <CheckIcon
-                    className='text-primary-600 h-6 w-5 flex-none'
+                    className='h-6 w-5 flex-none text-primary-600'
                     aria-hidden='true'
                   />
                   {feature}
@@ -130,9 +130,9 @@ export const PricingSection12: FC<PricingSectionProps> = ({
               aria-describedby={tier.id}
               className={classNames(
                 tier.featured
-                  ? 'bg-primary-600 hover:bg-primary-500 text-white shadow'
-                  : 'text-primary-600 ring-primary-200 hover:ring-primary-300 ring-1 ring-inset',
-                'focus-visible:outline-primary-600 mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10'
+                  ? 'bg-primary-600 text-white shadow hover:bg-primary-500'
+                  : 'text-primary-600 ring-1 ring-inset ring-primary-200 hover:ring-primary-300',
+                'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 sm:mt-10'
               )}
             >
               Get started today

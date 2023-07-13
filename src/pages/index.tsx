@@ -33,8 +33,8 @@ const Home: NextPage<HomeProps> = () => {
           content='Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.'
         />
       </Head>
-      <main className='grid grid-cols-[300px_1fr] min-h-screen'>
-        <SidebarSection/>
+      <main className='grid min-h-screen grid-cols-[300px_1fr]'>
+        <SidebarSection />
       </main>
     </>
   );

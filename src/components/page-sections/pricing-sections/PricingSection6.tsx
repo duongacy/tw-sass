@@ -80,19 +80,21 @@ export const PricingSection6: FC<PricingSectionProps> = ({
   );
   return (
     <div
-      className={'bg-neutral-900 py-24 sm:py-32 ' + className}
+      className={
+        'bg-neutral-900 py-24 sm:py-32 ' + className
+      }
       {...props}
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-4xl text-center'>
-          <h2 className='text-primary-400 text-base font-semibold leading-7'>
+          <h2 className='text-base font-semibold leading-7 text-primary-400'>
             Pricing
           </h2>
           <p className='mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl'>
             Pricing plans for teams of&nbsp;all&nbsp;sizes
           </p>
         </div>
-        <p className='text-neutral-300 mx-auto mt-6 max-w-2xl text-center text-lg leading-8'>
+        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-300'>
           Choose an affordable plan that’s packed with the
           best features for engaging your audience, creating
           customer loyalty, and driving sales.
@@ -128,7 +130,7 @@ export const PricingSection6: FC<PricingSectionProps> = ({
               key={tier.id}
               className={classNames(
                 tier.mostPopular
-                  ? 'ring-primary-500 bg-white/5 ring-2'
+                  ? 'bg-white/5 ring-2 ring-primary-500'
                   : 'ring-1 ring-white/10',
                 'rounded-3xl p-8 xl:p-10'
               )}
@@ -141,19 +143,19 @@ export const PricingSection6: FC<PricingSectionProps> = ({
                   {tier.name}
                 </h3>
                 {tier.mostPopular ? (
-                  <p className='bg-primary-500 rounded-full px-2.5 py-1 text-xs font-semibold leading-5 text-white'>
+                  <p className='rounded-full bg-primary-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white'>
                     Most popular
                   </p>
                 ) : null}
               </div>
-              <p className='text-neutral-300 mt-4 text-sm leading-6'>
+              <p className='mt-4 text-sm leading-6 text-neutral-300'>
                 {tier.description}
               </p>
               <p className='mt-6 flex items-baseline gap-x-1'>
                 <span className='text-4xl font-bold tracking-tight text-white'>
                   {tier.price[frequency.value]}
                 </span>
-                <span className='text-neutral-300 text-sm font-semibold leading-6'>
+                <span className='text-sm font-semibold leading-6 text-neutral-300'>
                   {frequency.priceSuffix}
                 </span>
               </p>
@@ -162,7 +164,7 @@ export const PricingSection6: FC<PricingSectionProps> = ({
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular
-                    ? 'bg-primary-500 hover:bg-primary-400 focus-visible:outline-primary-500 text-white shadow-sm'
+                    ? 'bg-primary-500 text-white shadow-sm hover:bg-primary-400 focus-visible:outline-primary-500'
                     : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
                   'mt-6 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                 )}
@@ -171,7 +173,7 @@ export const PricingSection6: FC<PricingSectionProps> = ({
               </a>
               <ul
                 role='list'
-                className='text-neutral-300 mt-8 space-y-3 text-sm leading-6 xl:mt-10'
+                className='mt-8 space-y-3 text-sm leading-6 text-neutral-300 xl:mt-10'
               >
                 {tier.features.map((feature: any) => (
                   <li

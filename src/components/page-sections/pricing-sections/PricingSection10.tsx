@@ -129,19 +129,21 @@ export const PricingSection10: FC<PricingSectionProps> = ({
 }) => {
   return (
     <div
-      className={'bg-neutral-900 py-24 sm:py-32 ' + className}
+      className={
+        'bg-neutral-900 py-24 sm:py-32 ' + className
+      }
       {...props}
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-4xl text-center'>
-          <h2 className='text-primary-400 text-base font-semibold leading-7'>
+          <h2 className='text-base font-semibold leading-7 text-primary-400'>
             Pricing
           </h2>
           <p className='mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl'>
             Plans for teams of&nbsp;all&nbsp;sizes
           </p>
         </div>
-        <p className='text-neutral-300 mx-auto mt-6 max-w-2xl text-center text-lg leading-8'>
+        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-300'>
           Distinctio et nulla eum soluta et neque labore
           quibusdam. Saepe et quasi iusto modi velit ut non
           voluptas in. Explicabo id ut laborum.
@@ -169,7 +171,7 @@ export const PricingSection10: FC<PricingSectionProps> = ({
                 <span className='text-4xl font-bold text-white'>
                   {tier.priceMonthly}
                 </span>
-                <span className='text-neutral-300 text-sm font-semibold'>
+                <span className='text-sm font-semibold text-neutral-300'>
                   /month
                 </span>
               </p>
@@ -178,7 +180,7 @@ export const PricingSection10: FC<PricingSectionProps> = ({
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular
-                    ? 'bg-primary-500 hover:bg-primary-400 focus-visible:outline-primary-500 text-white'
+                    ? 'bg-primary-500 text-white hover:bg-primary-400 focus-visible:outline-primary-500'
                     : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
                   'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                 )}
@@ -200,7 +202,7 @@ export const PricingSection10: FC<PricingSectionProps> = ({
                               className='flex gap-x-3'
                             >
                               <CheckIcon
-                                className='text-primary-400 h-6 w-5 flex-none'
+                                className='h-6 w-5 flex-none text-primary-400'
                                 aria-hidden='true'
                               />
                               <span>
@@ -208,7 +210,7 @@ export const PricingSection10: FC<PricingSectionProps> = ({
                                 {typeof feature.tiers[
                                   tier.name
                                 ] === 'string' ? (
-                                  <span className='text-neutral-400 text-sm leading-6'>
+                                  <span className='text-sm leading-6 text-neutral-400'>
                                     (
                                     {
                                       feature.tiers[
@@ -345,7 +347,7 @@ export const PricingSection10: FC<PricingSectionProps> = ({
                               {typeof feature.tiers[
                                 tier.name
                               ] === 'string' ? (
-                                <div className='text-neutral-300 text-center text-sm leading-6'>
+                                <div className='text-center text-sm leading-6 text-neutral-300'>
                                   {feature.tiers[tier.name]}
                                 </div>
                               ) : (
@@ -354,12 +356,12 @@ export const PricingSection10: FC<PricingSectionProps> = ({
                                     tier.name
                                   ] === true ? (
                                     <CheckIcon
-                                      className='text-primary-400 mx-auto h-5 w-5'
+                                      className='mx-auto h-5 w-5 text-primary-400'
                                       aria-hidden='true'
                                     />
                                   ) : (
                                     <MinusIcon
-                                      className='text-neutral-500 mx-auto h-5 w-5'
+                                      className='mx-auto h-5 w-5 text-neutral-500'
                                       aria-hidden='true'
                                     />
                                   )}

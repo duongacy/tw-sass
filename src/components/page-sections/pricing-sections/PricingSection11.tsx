@@ -171,7 +171,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
   );
   return (
     <div className={' ' + className} {...props}>
-      <div className='bg-neutral-900 flow-root pb-16 pt-24 sm:pt-32 lg:pb-0'>
+      <div className='flow-root bg-neutral-900 pb-16 pt-24 sm:pt-32 lg:pb-0'>
         <div className='mx-auto max-w-7xl px-6 lg:px-8'>
           <div className='relative z-10'>
             <h2 className='mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white'>
@@ -230,7 +230,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
               </defs>
             </svg>
             <div
-              className='lg:bg-neutral-800/80 hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:ring-1 lg:ring-white/10'
+              className='hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-neutral-800/80 lg:ring-1 lg:ring-white/10'
               aria-hidden='true'
             />
             {tiers.map((tier: any) => (
@@ -238,7 +238,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                 key={tier.id}
                 className={classNames(
                   tier.featured
-                    ? 'ring-neutral-900/10 z-10 bg-white shadow-xl ring-1'
+                    ? 'z-10 bg-white shadow-xl ring-1 ring-neutral-900/10'
                     : 'bg-neutral-800/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0',
                   'relative rounded-2xl'
                 )}
@@ -291,7 +291,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                       aria-describedby={tier.id}
                       className={classNames(
                         tier.featured
-                          ? 'bg-primary-600 hover:bg-primary-500 focus-visible:outline-primary-600 shadow-sm'
+                          ? 'bg-primary-600 shadow-sm hover:bg-primary-500 focus-visible:outline-primary-600'
                           : 'bg-white/10 hover:bg-white/20 focus-visible:outline-white',
                         'rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                       )}
@@ -336,7 +336,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
           </div>
         </div>
       </div>
-      <div className='bg-neutral-50 relative lg:pt-14'>
+      <div className='relative bg-neutral-50 lg:pt-14'>
         <div className='mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8'>
           {/* Feature comparison (up to lg) */}
           <section
@@ -354,7 +354,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
               {tiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className='border-neutral-900/10 border-t'
+                  className='border-t border-neutral-900/10'
                 >
                   <div
                     className={classNames(
@@ -374,7 +374,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                     >
                       {tier.name}
                     </h3>
-                    <p className='text-neutral-600 mt-1 text-sm leading-6'>
+                    <p className='mt-1 text-sm leading-6 text-neutral-600'>
                       {tier.description}
                     </p>
                   </div>
@@ -382,7 +382,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                   <div className='mt-10 space-y-10'>
                     {sections.map((section) => (
                       <div key={section.name}>
-                        <h4 className='text-neutral-900 text-sm font-semibold leading-6'>
+                        <h4 className='text-sm font-semibold leading-6 text-neutral-900'>
                           {section.name}
                         </h4>
                         <div className='relative mt-6'>
@@ -395,19 +395,19 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                           <div
                             className={classNames(
                               tier.featured
-                                ? 'ring-primary-600 ring-2'
-                                : 'ring-neutral-900/10 ring-1',
+                                ? 'ring-2 ring-primary-600'
+                                : 'ring-1 ring-neutral-900/10',
                               'relative rounded-lg bg-white shadow-sm sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0'
                             )}
                           >
-                            <dl className='divide-neutral-200 divide-y text-sm leading-6'>
+                            <dl className='divide-y divide-neutral-200 text-sm leading-6'>
                               {section.features.map(
                                 (feature: any) => (
                                   <div
                                     key={feature.name}
                                     className='flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0'
                                   >
-                                    <dt className='text-neutral-600 pr-4'>
+                                    <dt className='pr-4 text-neutral-600'>
                                       {feature.name}
                                     </dt>
                                     <dd className='flex items-center justify-end sm:justify-center sm:px-4'>
@@ -417,7 +417,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                                         <span
                                           className={
                                             tier.featured
-                                              ? 'text-primary-600 font-semibold'
+                                              ? 'font-semibold text-primary-600'
                                               : 'text-neutral-900'
                                           }
                                         >
@@ -433,12 +433,12 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                                             tier.name
                                           ] === true ? (
                                             <CheckIcon
-                                              className='text-primary-600 mx-auto h-5 w-5'
+                                              className='mx-auto h-5 w-5 text-primary-600'
                                               aria-hidden='true'
                                             />
                                           ) : (
                                             <XMarkIcon
-                                              className='text-neutral-400 mx-auto h-5 w-5'
+                                              className='mx-auto h-5 w-5 text-neutral-400'
                                               aria-hidden='true'
                                             />
                                           )}
@@ -464,8 +464,8 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                             aria-hidden='true'
                             className={classNames(
                               tier.featured
-                                ? 'ring-primary-600 ring-2'
-                                : 'ring-neutral-900/10 ring-1',
+                                ? 'ring-2 ring-primary-600'
+                                : 'ring-1 ring-neutral-900/10',
                               'pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 rounded-lg sm:block'
                             )}
                           />
@@ -487,7 +487,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
               Feature comparison
             </h2>
 
-            <div className='border-neutral-900/10 grid grid-cols-4 gap-x-8 border-t before:block'>
+            <div className='grid grid-cols-4 gap-x-8 border-t border-neutral-900/10 before:block'>
               {tiers.map((tier) => (
                 <div
                   key={tier.id}
@@ -512,7 +512,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                     >
                       {tier.name}
                     </p>
-                    <p className='text-neutral-600 mt-1 text-sm leading-6'>
+                    <p className='mt-1 text-sm leading-6 text-neutral-600'>
                       {tier.description}
                     </p>
                   </div>
@@ -523,7 +523,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
             <div className='-mt-6 space-y-16'>
               {sections.map((section) => (
                 <div key={section.name}>
-                  <h3 className='text-neutral-900 text-sm font-semibold leading-6'>
+                  <h3 className='text-sm font-semibold leading-6 text-neutral-900'>
                     {section.name}
                   </h3>
                   <div className='relative -mx-8 mt-10'>
@@ -563,13 +563,13 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                             <tr key={feature.name}>
                               <th
                                 scope='row'
-                                className='text-neutral-900 w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6'
+                                className='w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-neutral-900'
                               >
                                 {feature.name}
                                 {featureIdx !==
                                 section.features.length -
                                   1 ? (
-                                  <div className='bg-neutral-200 absolute inset-x-8 mt-3 h-px' />
+                                  <div className='absolute inset-x-8 mt-3 h-px bg-neutral-200' />
                                 ) : null}
                               </th>
                               {tiers.map((tier: any) => (
@@ -584,7 +584,7 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                                       <span
                                         className={classNames(
                                           tier.featured
-                                            ? 'text-primary-600 font-semibold'
+                                            ? 'font-semibold text-primary-600'
                                             : 'text-neutral-900',
                                           'text-sm leading-6'
                                         )}
@@ -601,12 +601,12 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                                           tier.name
                                         ] === true ? (
                                           <CheckIcon
-                                            className='text-primary-600 mx-auto h-5 w-5'
+                                            className='mx-auto h-5 w-5 text-primary-600'
                                             aria-hidden='true'
                                           />
                                         ) : (
                                           <XMarkIcon
-                                            className='text-neutral-400 mx-auto h-5 w-5'
+                                            className='mx-auto h-5 w-5 text-neutral-400'
                                             aria-hidden='true'
                                           />
                                         )}
@@ -639,8 +639,8 @@ export const PricingSection11: FC<PricingSectionProps> = ({
                           key={tier.id}
                           className={classNames(
                             tier.featured
-                              ? 'ring-primary-600 ring-2'
-                              : 'ring-neutral-900/10 ring-1',
+                              ? 'ring-2 ring-primary-600'
+                              : 'ring-1 ring-neutral-900/10',
                             'rounded-lg'
                           )}
                         />
