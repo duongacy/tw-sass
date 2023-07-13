@@ -8,4 +8,3 @@ Thắng:
 
 *** Lưu ý: 
 - Tạo xong 1 component trước=> review ok=> tiếp tục clone ra các component khác
-- Làm tương tự feature-sections

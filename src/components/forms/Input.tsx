@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 import * as React from 'react';
-import { InputProps } from '../types';
-import { contrastRing } from '../contrast/configure/contrastRing';
 import { contrastText } from '../contrast/configure/contrastText';
-import { contrastBg } from '../contrast/configure/contrastBg';
+import { InputProps } from '../types';
 
 export const Input: React.FC<
   InputProps & {

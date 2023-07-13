@@ -1,5 +1,6 @@
 import { Newsletter1 } from '@/components/sections/marketing/newsletter/Newsletter1';
 import { Newsletter2 } from '@/components/sections/marketing/newsletter/Newsletter2';
+import { Newsletter3 } from '@/components/sections/marketing/newsletter/Newsletter3';
 import { Newsletter4 } from '@/components/sections/marketing/newsletter/Newsletter4';
 import { Newsletter5 } from '@/components/sections/marketing/newsletter/Newsletter5';
 import { Newsletter6 } from '@/components/sections/marketing/newsletter/Newsletter6';
@@ -12,6 +13,8 @@ export default function Newsletter() {
       <Newsletter1 />
       Simple side-by-side
       <Newsletter2 />
+      Simple side-by-side on dark
+      <Newsletter3 />
       Simple side-by-side on brand
       <Newsletter4 />
       Simple stacked

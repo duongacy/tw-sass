@@ -10,6 +10,9 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import { Sidebar2 } from '@/components/sections/navigation/sidebar/Sidebar2';
+import { Sidebar5 } from '@/components/sections/navigation/sidebar/Sidebar5';
+import { SidebarSection } from '@/sections/SidebarSection';
 
 type Repo = {
   name: string;
@@ -24,34 +27,16 @@ const Home: NextPage<HomeProps> = () => {
   return (
     <>
       <Head>
-        <title>YLVN template</title>
+        <title>Newbie template</title>
         <meta
           name='description'
           content='Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.'
         />
       </Head>
-      <Header />
-      <main>
-        {/* <HeroComponent />
-        <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
-        <Testimonials />
-        <Pricing />
-        <Faqs /> */}
+      <main className='grid grid-cols-[300px_1fr] min-h-screen'>
+        <SidebarSection/>
       </main>
-      <Footer />
     </>
   );
 };
 export default Home;
-
-export const getStaticProps: GetStaticProps<
-  HomeProps
-> = async () => {
-  const res1 = axios.get(
-    'https://api.github.com/repos/vercel/next.js'
-  );
-  const repo = (await res1).data;
-  return { props: { repo } };
-};

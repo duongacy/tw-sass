@@ -12,6 +12,7 @@ export const ToggleMode = () => {
   React.useEffect(() => {
     setTheme(systemTheme === 'dark' ? 'dark' : 'light');
   }, [systemTheme]);
+  
   return (
     <NoSsr>
       <button

@@ -1,14 +1,14 @@
-import 'focus-visible';
 import '@/styles/tailwind.css';
 import {
   Hydrate,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
+import 'focus-visible';
 
-import type { AppProps } from 'next/app';
-import { useState, JSX } from 'react';
 import { ThemeProvider } from 'next-themes';
+import type { AppProps } from 'next/app';
+import { JSX, useState } from 'react';
 
 export default function App({
   Component,
