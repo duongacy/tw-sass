@@ -10,6 +10,13 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import { HeroComponent } from '@/components/Hero';
+import { PrimaryFeatures } from '@/components/PrimaryFeatures';
+import { SecondaryFeatures } from '@/components/SecondaryFeatures';
+import { CallToAction } from '@/components/CallToAction';
+import { Testimonials } from '@/components/Testimonials';
+import { Pricing } from '@/components/Pricing';
+import { Faqs } from '@/components/Faqs';
 
 type Repo = {
   name: string;
@@ -32,13 +39,13 @@ const Home: NextPage<HomeProps> = () => {
       </Head>
       <Header />
       <main>
-        {/* <HeroComponent />
+        <HeroComponent />
         <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />
         <Testimonials />
         <Pricing />
-        <Faqs /> */}
+        <Faqs />
       </main>
       <Footer />
     </>

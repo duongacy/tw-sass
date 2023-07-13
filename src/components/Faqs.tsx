@@ -2,6 +2,7 @@ import Image from 'next/image';
 import backgroundImage from '@/images/background-faqs.jpg';
 import { Container } from './Container';
 import { v4 } from 'uuid';
+import { Button } from '@material-tailwind/react';
 
 export function Faqs() {
   return (
