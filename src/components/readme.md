@@ -1,8 +1,6 @@
 Tuấn:
 - hero-sections, branch sections/hero-sections
 - cta-sections, branch sections/cta-sections
-Hoài:
-- pricing-sections, branch sections/pricing-sections
 Thắng:
 - stats-sections, branch sections/stats-sections
 
