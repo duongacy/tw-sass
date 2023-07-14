@@ -47,7 +47,7 @@ module.exports = {
       white: colors.white,
       neutral: colors.slate,
       secondary: colors.slate,
-      primary: colors.indigo,
+      primary: colors.violet,
       info: '',
       success: '',
       error: '',

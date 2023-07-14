@@ -1,10 +1,10 @@
-import { NewsletterSections1 } from '@/components/page-sections/newsletter-sections/NewsletterSections1';
-import { NewsletterSections2 } from '@/components/page-sections/newsletter-sections/NewsletterSections2';
-import { NewsletterSections3 } from '@/components/page-sections/newsletter-sections/NewsletterSections3';
-import { NewsletterSections4 } from '@/components/page-sections/newsletter-sections/NewsletterSections4';
-import { NewsletterSections5 } from '@/components/page-sections/newsletter-sections/NewsletterSections5';
-import { NewsletterSections6 } from '@/components/page-sections/newsletter-sections/NewsletterSections6';
-import { NewsletterSections7 } from '@/components/page-sections/newsletter-sections/NewsletterSections7';
+import { NewsletterSection1 } from '@/components/page-sections/newsletter-sections/NewsletterSection1';
+import { NewsletterSection2 } from '@/components/page-sections/newsletter-sections/NewsletterSection2';
+import { NewsletterSection3 } from '@/components/page-sections/newsletter-sections/NewsletterSection3';
+import { NewsletterSection4 } from '@/components/page-sections/newsletter-sections/NewsletterSection4';
+import { NewsletterSection5 } from '@/components/page-sections/newsletter-sections/NewsletterSection5';
+import { NewsletterSection6 } from '@/components/page-sections/newsletter-sections/NewsletterSection6';
+import { NewsletterSection7 } from '@/components/page-sections/newsletter-sections/NewsletterSection7';
 import MainTemplate from '@/templates/MainTemplate';
 
 export default function HeroSectionsPage() {
@@ -12,19 +12,19 @@ export default function HeroSectionsPage() {
     <>
       <MainTemplate>
         Side-by-side with details
-        <NewsletterSections1 />
+        <NewsletterSection1 />
         Simple side-by-side
-        <NewsletterSections2 />
+        <NewsletterSection2 />
         Simple side-by-side on dark
-        <NewsletterSections3 />
+        <NewsletterSection3 />
         Simple side-by-side on brand
-        <NewsletterSections4 />
+        <NewsletterSection4 />
         Simple stacked
-        <NewsletterSections5 />
+        <NewsletterSection5 />
         Centered card
-        <NewsletterSections6 />
+        <NewsletterSection6 />
         Side-by-side on card
-        <NewsletterSections7 />
+        <NewsletterSection7 />
       </MainTemplate>
     </>
   );

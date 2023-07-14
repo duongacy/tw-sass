@@ -5,7 +5,7 @@ import {
   HandRaisedIcon,
 } from '@heroicons/react/24/outline';
 
-export const NewsletterSections1: FC<
+export const NewsletterSection1: FC<
   NewsletterSectionProps
 > = ({ className, ...props }) => {
   return (

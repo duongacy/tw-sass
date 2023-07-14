@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { NewsletterSectionProps } from './types';
 
-export const NewsletterSections4: FC<
+export const NewsletterSection4: FC<
   NewsletterSectionProps
 > = ({ className, ...props }) => {
   return (

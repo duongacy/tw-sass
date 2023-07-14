@@ -1,3 +1,3 @@
 import { DivProps } from '@/components/types';
 
-export interface ContentSectionProps extends DivProps {}
+export interface TeamSectionProps extends DivProps {}
