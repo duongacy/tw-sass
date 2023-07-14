@@ -17,7 +17,7 @@ export const StatsSection5: FC<StatsSectionProps> = ({
 }) => {
   return (
     <div
-      className={`bg-neutral-900 relative isolate overflow-hidden py-24 sm:py-32 ${className}`}
+      className={`relative isolate overflow-hidden bg-neutral-900 py-24 sm:py-32 ${className}`}
       {...props}
     >
       <img
@@ -39,13 +39,13 @@ export const StatsSection5: FC<StatsSectionProps> = ({
           />
         </div>
         <div className='mx-auto max-w-2xl lg:mx-0 lg:max-w-xl'>
-          <h2 className='text-primary-400 text-base font-semibold leading-8'>
+          <h2 className='text-base font-semibold leading-8 text-primary-400'>
             Our track record
           </h2>
           <p className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
             Trusted by thousands of creators&nbsp;worldwide
           </p>
-          <p className='text-neutral-300 mt-6 text-lg leading-8'>
+          <p className='mt-6 text-lg leading-8 text-neutral-300'>
             Lorem ipsum, dolor sit amet consectetur
             adipisicing elit. Maiores impedit perferendis
             suscipit eaque, iste dolor cupiditate blanditiis

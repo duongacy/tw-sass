@@ -23,10 +23,10 @@ export const StatsSection3: FC<StatsSectionProps> = ({
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:max-w-none'>
           <div className='text-center'>
-            <h2 className='text-neutral-900 text-3xl font-bold tracking-tight sm:text-4xl'>
+            <h2 className='text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl'>
               Trusted by creators worldwide
             </h2>
-            <p className='text-neutral-600 mt-4 text-lg leading-8'>
+            <p className='mt-4 text-lg leading-8 text-neutral-600'>
               Lorem ipsum dolor sit amet consect adipisicing
               possimus.
             </p>
@@ -35,12 +35,12 @@ export const StatsSection3: FC<StatsSectionProps> = ({
             {stats.map((stat) => (
               <div
                 key={stat.id}
-                className='bg-neutral-400/5 flex flex-col p-8'
+                className='flex flex-col bg-neutral-400/5 p-8'
               >
-                <dt className='text-neutral-600 text-sm font-semibold leading-6'>
+                <dt className='text-sm font-semibold leading-6 text-neutral-600'>
                   {stat.name}
                 </dt>
-                <dd className='text-neutral-900 order-first text-3xl font-semibold tracking-tight'>
+                <dd className='order-first text-3xl font-semibold tracking-tight text-neutral-900'>
                   {stat.value}
                 </dd>
               </div>

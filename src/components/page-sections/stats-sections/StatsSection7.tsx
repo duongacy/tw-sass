@@ -46,7 +46,7 @@ export const StatsSection7: FC<StatsSectionProps> = ({
             <div key={item.name}>
               <time
                 dateTime={item.dateTime}
-                className='text-primary-600 flex items-center text-sm font-semibold leading-6'
+                className='flex items-center text-sm font-semibold leading-6 text-primary-600'
               >
                 <svg
                   viewBox='0 0 4 4'
@@ -62,14 +62,14 @@ export const StatsSection7: FC<StatsSectionProps> = ({
                 </svg>
                 {item.date}
                 <div
-                  className='bg-neutral-900/10 absolute -ml-2 h-px w-screen -translate-x-full sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0'
+                  className='absolute -ml-2 h-px w-screen -translate-x-full bg-neutral-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0'
                   aria-hidden='true'
                 />
               </time>
-              <p className='text-neutral-900 mt-6 text-lg font-semibold leading-8 tracking-tight'>
+              <p className='mt-6 text-lg font-semibold leading-8 tracking-tight text-neutral-900'>
                 {item.name}
               </p>
-              <p className='text-neutral-600 mt-1 text-base leading-7'>
+              <p className='mt-1 text-base leading-7 text-neutral-600'>
                 {item.description}
               </p>
             </div>

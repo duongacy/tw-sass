@@ -20,12 +20,12 @@ export const StatsSection10: FC<StatsSectionProps> = ({
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0 lg:max-w-none'>
-          <h2 className='text-neutral-900 text-3xl font-bold tracking-tight sm:text-4xl'>
+          <h2 className='text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl'>
             Our mission
           </h2>
           <div className='mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row'>
             <div className='lg:w-full lg:max-w-2xl lg:flex-auto'>
-              <p className='text-neutral-600 text-xl leading-8'>
+              <p className='text-xl leading-8 text-neutral-600'>
                 Aliquet nec orci mattis amet quisque
                 ullamcorper neque, nibh sem. At arcu, sit
                 dui mi, nibh dui, diam eget aliquam. Quisque
@@ -33,7 +33,7 @@ export const StatsSection10: FC<StatsSectionProps> = ({
                 orci at in viverra scelerisque eget.
                 Eleifend egestas fringilla sapien.
               </p>
-              <p className='text-neutral-700 mt-10 max-w-xl text-base leading-7'>
+              <p className='mt-10 max-w-xl text-base leading-7 text-neutral-700'>
                 Faucibus commodo massa rhoncus, volutpat.
                 Dignissim sed eget risus enim. Mattis mauris
                 semper sed amet vitae sed turpis id. Id
@@ -52,10 +52,10 @@ export const StatsSection10: FC<StatsSectionProps> = ({
                     key={stat.label}
                     className='flex flex-col-reverse gap-y-4'
                   >
-                    <dt className='text-neutral-600 text-base leading-7'>
+                    <dt className='text-base leading-7 text-neutral-600'>
                       {stat.label}
                     </dt>
-                    <dd className='text-neutral-900 text-5xl font-semibold tracking-tight'>
+                    <dd className='text-5xl font-semibold tracking-tight text-neutral-900'>
                       {stat.value}
                     </dd>
                   </div>

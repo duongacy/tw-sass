@@ -30,10 +30,10 @@ export const StatsSection1: FC<StatsSectionProps> = ({
               key={stat.id}
               className='mx-auto flex max-w-xs flex-col gap-y-4'
             >
-              <dt className='text-neutral-600 text-base leading-7'>
+              <dt className='text-base leading-7 text-neutral-600'>
                 {stat.name}
               </dt>
-              <dd className='text-neutral-900 order-first text-3xl font-semibold tracking-tight sm:text-5xl'>
+              <dd className='order-first text-3xl font-semibold tracking-tight text-neutral-900 sm:text-5xl'>
                 {stat.value}
               </dd>
             </div>

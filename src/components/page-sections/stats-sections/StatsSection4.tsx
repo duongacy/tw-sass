@@ -26,7 +26,7 @@ export const StatsSection4: FC<StatsSectionProps> = ({
             <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
               Trusted by creators worldwide
             </h2>
-            <p className='text-neutral-300 mt-4 text-lg leading-8'>
+            <p className='mt-4 text-lg leading-8 text-neutral-300'>
               Lorem ipsum dolor sit amet consect adipisicing
               possimus.
             </p>
@@ -37,7 +37,7 @@ export const StatsSection4: FC<StatsSectionProps> = ({
                 key={stat.id}
                 className='flex flex-col bg-white/5 p-8'
               >
-                <dt className='text-neutral-300 text-sm font-semibold leading-6'>
+                <dt className='text-sm font-semibold leading-6 text-neutral-300'>
                   {stat.name}
                 </dt>
                 <dd className='order-first text-3xl font-semibold tracking-tight text-white'>
