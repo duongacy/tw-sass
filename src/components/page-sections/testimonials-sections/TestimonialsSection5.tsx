@@ -14,7 +14,7 @@ export const TestimonialsSection5: FC<
           <div className='flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20'>
             <img
               className='h-12 self-start'
-              src='https://tailwindui.com/img/logos/tuple-logo-neutral-900.svg'
+              src='https://tailwindui.com/img/logos/tuple-logo-gray-900.svg'
               alt=''
             />
             <figure className='mt-10 flex flex-auto flex-col justify-between'>
@@ -49,7 +49,7 @@ export const TestimonialsSection5: FC<
           <div className='flex flex-col border-t border-neutral-900/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20'>
             <img
               className='h-12 self-start'
-              src='https://tailwindui.com/img/logos/reform-logo-neutral-900.svg'
+              src='https://tailwindui.com/img/logos/reform-logo-gray-900.svg'
               alt=''
             />
             <figure className='mt-10 flex flex-auto flex-col justify-between'>
