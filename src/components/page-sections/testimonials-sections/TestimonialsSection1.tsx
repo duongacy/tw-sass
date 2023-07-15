@@ -14,7 +14,7 @@ export const TestimonialsSection1: FC<
       <div className='mx-auto max-w-2xl lg:max-w-4xl'>
         <img
           className='mx-auto h-12'
-          src='https://tailwindui.com/img/logos/workcation-logo-primary-600.svg'
+          src='https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg'
           alt=''
         />
         <figure className='mt-10'>

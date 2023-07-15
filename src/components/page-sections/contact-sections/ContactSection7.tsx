@@ -164,7 +164,7 @@ export const ContactSection7: FC<ContactSectionProps> = ({
           <div className='lg:mt-6 lg:w-80 lg:flex-none'>
             <img
               className='h-12 w-auto'
-              src='https://tailwindui.com/img/logos/workcation-logo-primary-600.svg'
+              src='https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg'
               alt=''
             />
             <figure className='mt-10'>
