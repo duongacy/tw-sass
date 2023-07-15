@@ -9,19 +9,18 @@ import MainTemplate from '@/templates/MainTemplate';
 export default function ContentSectionsPage() {
   return (
     <MainTemplate>
-      Content Sections
-      <ContentSection1 />
       With sticky product screenshot
-      <ContentSection2 />
+      <ContentSection1 />
       With testimonial
-      <ContentSection3 />
+      <ContentSection2 />
       Two columns with screenshot
-      <ContentSection4 />
+      <ContentSection3 />
       With testimonial and stats
-      <ContentSection5 />
+      <ContentSection4 />
       Split with image
-      <ContentSection6 />
+      <ContentSection5 />
       Centered
+      <ContentSection6 />
     </MainTemplate>
   );
 }

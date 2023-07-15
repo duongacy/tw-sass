@@ -8,111 +8,9 @@ import {
   FolderIcon,
   HomeIcon,
 } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FC } from 'react';
-
-const navigation = [
-  {
-    name: 'Dashboard',
-    href: '#',
-    icon: HomeIcon,
-    current: true,
-  },
-  {
-    name: 'Page Sections',
-    icon: FolderIcon,
-    current: false,
-    children: [
-      {
-        name: 'Hero Sections',
-        href: '/page-sections/hero-sections',
-      },
-      {
-        name: 'Feature Sections',
-        href: '/page-sections/feature-sections',
-      },
-      {
-        name: 'CTA Sections',
-        href: '/page-sections/cta-sections',
-      },
-      {
-        name: 'Pricing Sections',
-        href: '/page-sections/pricing-sections',
-      },
-      {
-        name: 'Header Sections',
-        href: '/page-sections/header-sections',
-      },
-      {
-        name: 'Newsletter Sections',
-        href: '/page-sections/newsletter-sections',
-      },
-      {
-        name: 'Stats',
-        href: '/page-sections/stats-sections',
-      },
-      {
-        name: 'Testimonials',
-        href: '/page-sections/testimonials-sections',
-      },
-      {
-        name: 'Blog Sections',
-        href: '/page-sections/blog-sections',
-      },
-      {
-        name: 'Contact Sections',
-        href: '/page-sections/contact-sections',
-      },
-      {
-        name: 'Team Sections',
-        href: '/page-sections/team-sections',
-      },
-      {
-        name: 'Content Sections',
-        href: '/page-sections/content-sections',
-      },
-      {
-        name: 'Logo Cloud',
-        href: '/page-sections/logo-cloud-sections',
-      },
-      {
-        name: 'FAQs',
-        href: '/page-sections/faqs-sections',
-      },
-      {
-        name: 'Footer',
-        href: '/page-sections/footer-sections',
-      },
-    ],
-  },
-  {
-    name: 'Elements',
-    icon: FolderIcon,
-    current: false,
-    children: [
-      { name: 'Headers', href: '#' },
-      { name: 'Flyout Menus', href: '#' },
-      { name: 'Banners', href: '#' },
-    ],
-  },
-  {
-    name: 'Calendar',
-    href: '#',
-    icon: CalendarIcon,
-    current: false,
-  },
-  {
-    name: 'Documents',
-    href: '#',
-    icon: DocumentDuplicateIcon,
-    current: false,
-  },
-  {
-    name: 'Reports',
-    href: '#',
-    icon: ChartPieIcon,
-    current: false,
-  },
-];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -122,6 +20,113 @@ export const SidebarSection: FC<DivProps> = ({
   className,
   ...props
 }) => {
+  const { pathname } = useRouter();
+  const navigation = [
+    {
+      name: 'Dashboard',
+      href: '/',
+      icon: HomeIcon,
+    },
+    {
+      name: 'Page Sections',
+      icon: FolderIcon,
+
+      children: [
+        {
+          name: 'Hero Sections',
+          href: '/page-sections/hero-sections',
+        },
+        {
+          name: 'Feature Sections',
+          href: '/page-sections/feature-sections',
+        },
+        {
+          name: 'CTA Sections',
+          href: '/page-sections/cta-sections',
+        },
+        {
+          name: 'Pricing Sections',
+          href: '/page-sections/pricing-sections',
+        },
+        {
+          name: 'Header Sections',
+          href: '/page-sections/header-sections',
+        },
+        {
+          name: 'Newsletter Sections',
+          href: '/page-sections/newsletter-sections',
+        },
+        {
+          name: 'Stats',
+          href: '/page-sections/stats-sections',
+        },
+        {
+          name: 'Testimonials',
+          href: '/page-sections/testimonials-sections',
+        },
+        {
+          name: 'Blog Sections',
+          href: '/page-sections/blog-sections',
+        },
+        {
+          name: 'Contact Sections',
+          href: '/page-sections/contact-sections',
+        },
+        {
+          name: 'Team Sections',
+          href: '/page-sections/team-sections',
+        },
+        {
+          name: 'Content Sections',
+          href: '/page-sections/content-sections',
+        },
+        {
+          name: 'Logo Cloud',
+          href: '/page-sections/logo-cloud-sections',
+        },
+        {
+          name: 'FAQs',
+          href: '/page-sections/faqs-sections',
+        },
+        {
+          name: 'Footer',
+          href: '/page-sections/footer-sections',
+        },
+      ].map((item) => ({
+        ...item,
+        current: item.href === pathname,
+      })),
+    },
+    {
+      name: 'Elements',
+      icon: FolderIcon,
+      current: false,
+      children: [
+        { name: 'Headers', href: '#' },
+        { name: 'Flyout Menus', href: '#' },
+        { name: 'Banners', href: '#' },
+      ],
+    },
+    {
+      name: 'Calendar',
+      href: '#',
+      icon: CalendarIcon,
+      current: false,
+    },
+    {
+      name: 'Documents',
+      href: '#',
+      icon: DocumentDuplicateIcon,
+      current: false,
+    },
+    {
+      name: 'Reports',
+      href: '#',
+      icon: ChartPieIcon,
+      current: false,
+    },
+  ];
+
   return (
     <div
       className={`flex grow flex-col gap-y-5 overflow-y-auto border-r border-neutral-200 bg-white px-6 ${className}`}
@@ -144,7 +149,7 @@ export const SidebarSection: FC<DivProps> = ({
               {navigation.map((item) => (
                 <li key={item.name}>
                   {!item.children ? (
-                    <a
+                    <Link
                       href={item.href}
                       className={classNames(
                         item.current
@@ -158,7 +163,7 @@ export const SidebarSection: FC<DivProps> = ({
                         aria-hidden='true'
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   ) : (
                     <Disclosure as='div'>
                       {({ open }) => (
@@ -192,11 +197,13 @@ export const SidebarSection: FC<DivProps> = ({
                           >
                             {item.children.map(
                               (subItem: any) => (
-                                <li key={subItem.name}>
+                                <Link
+                                  href={subItem.href}
+                                  key={subItem.name}
+                                >
                                   {/* 44px */}
                                   <Disclosure.Button
                                     as='a'
-                                    href={subItem.href}
                                     className={classNames(
                                       subItem.current
                                         ? 'bg-neutral-50'
@@ -206,7 +213,7 @@ export const SidebarSection: FC<DivProps> = ({
                                   >
                                     {subItem.name}
                                   </Disclosure.Button>
-                                </li>
+                                </Link>
                               )
                             )}
                           </Disclosure.Panel>
