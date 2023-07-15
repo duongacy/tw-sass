@@ -32,10 +32,10 @@ export const SidebarSection: FC<DivProps> = ({
       icon: FolderIcon,
 
       children: [
-        {
-          name: 'Hero Sections',
-          href: '/page-sections/hero-sections',
-        },
+        // {
+        //   name: 'Hero Sections',
+        //   href: '/page-sections/hero-sections',
+        // },
         {
           name: 'Feature Sections',
           href: '/page-sections/feature-sections',
