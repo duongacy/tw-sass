@@ -36,7 +36,7 @@ export const FeatureSection6: FC<FeatureSectionProps> = ({
 }) => {
   return (
     <div
-      className={`bg-white py-24 sm:py-32 ${className}`}
+      className={`bg-bgc-0 py-24 sm:py-32 ${className}`}
       {...props}
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -44,10 +44,10 @@ export const FeatureSection6: FC<FeatureSectionProps> = ({
           <h2 className='text-base font-semibold leading-7 text-primary-600'>
             Deploy faster
           </h2>
-          <p className='mt-2 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl'>
+          <p className='mt-2 text-3xl font-bold tracking-tight text-accent-0 sm:text-4xl'>
             Everything you need to deploy your app
           </p>
-          <p className='mt-6 text-lg leading-8 text-neutral-600'>
+          <p className='mt-6 text-lg leading-8 text-accent-300'>
             Quis tellus eget adipiscing convallis sit sit
             eget aliquet quis. Suspendisse eget egestas a
             elementum pulvinar et feugiat blandit at. In mi
@@ -61,14 +61,14 @@ export const FeatureSection6: FC<FeatureSectionProps> = ({
                 key={feature.name}
                 className='flex flex-col'
               >
-                <dt className='flex items-center gap-x-3 text-base font-semibold leading-7 text-neutral-900'>
+                <dt className='flex items-center gap-x-3 text-base font-semibold leading-7 text-accent-0'>
                   <feature.icon
                     className='h-5 w-5 flex-none text-primary-600'
                     aria-hidden='true'
                   />
                   {feature.name}
                 </dt>
-                <dd className='mt-4 flex flex-auto flex-col text-base leading-7 text-neutral-600'>
+                <dd className='mt-4 flex flex-auto flex-col text-base leading-7 text-accent-300'>
                   <p className='flex-auto'>
                     {feature.description}
                   </p>

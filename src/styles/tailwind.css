@@ -4,26 +4,68 @@
 
 @layer base {
   :root {
-    --color-bkg: 210deg 40% 98%;
-    --color-content: 217deg 32.6% 17.5%;
-    --color-accent1: 288deg 95.8% 90.6%;
-    --color-accent2: 168deg 83.8% 78.2%;
+    --color-bgc-0: 0 0% 100%;
+    --color-bgc-50: 0 0% 95%;
+    --color-bgc-100: 0 0% 90%;
+    --color-bgc-200: 0 0% 80%;
+    --color-bgc-300: 0 0% 70%;
+    --color-bgc-400: 0 0% 60%;
+    --color-bgc-500: 0 0% 50%;
+    --color-bgc-600: 0 0% 40%;
+    --color-bgc-700: 0 0% 30%;
+    --color-bgc-800: 0 0% 20%;
+    --color-bgc-900: 0 0% 10%;
+    --color-bgc-950: 0 0% 5%;
+
+    --color-accent-0: 0 0% 0%;
+    --color-accent-50: 0 0% 5%;
+    --color-accent-100: 0 0% 10%;
+    --color-accent-200: 0 0% 20%;
+    --color-accent-300: 0 0% 30%;
+    --color-accent-400: 0 0% 40%;
+    --color-accent-500: 0 0% 50%;
+    --color-accent-600: 0 0% 60%;
+    --color-accent-700: 0 0% 70%;
+    --color-accent-800: 0 0% 80%;
+    --color-accent-900: 0 0% 90%;
+    --color-accent-950: 0 0% 95%;
   }
 
   /* @media (prefers-color-scheme: dark) {
     :root {
-      --color-bkg: 217deg 32.6% 17.5%;
-      --color-content: 210deg 40% 98%;
+      --color-bgc: 217deg 32.6% 17.5%;
+      --color-textc: 210deg 40% 98%;
       --color-accent1: 288deg 95.8% 60.6%;
       --color-accent2: 168deg 83.8% 48.2%;
     }
   } */
 
   :root[data-theme='dark'] {
-    --color-bkg: 217deg 32.6% 57.5%;
-    --color-content: 210deg 40% 98%;
-    --color-accent1: 288deg 95.8% 60.6%;
-    --color-accent2: 168deg 83.8% 48.2%;
+    --color-accent-0: 0 0% 100%;
+    --color-accent-50: 0 0% 95%;
+    --color-accent-100: 0 0% 90%;
+    --color-accent-200: 0 0% 80%;
+    --color-accent-300: 0 0% 70%;
+    --color-accent-400: 0 0% 60%;
+    --color-accent-500: 0 0% 50%;
+    --color-accent-600: 0 0% 40%;
+    --color-accent-700: 0 0% 30%;
+    --color-accent-800: 0 0% 20%;
+    --color-accent-900: 0 0% 10%;
+    --color-accent-950: 0 0% 5%;
+
+    --color-bgc-0: 0 0% 0%;
+    --color-bgc-50: 0 0% 5%;
+    --color-bgc-100: 0 0% 10%;
+    --color-bgc-200: 0 0% 20%;
+    --color-bgc-300: 0 0% 30%;
+    --color-bgc-400: 0 0% 40%;
+    --color-bgc-500: 0 0% 50%;
+    --color-bgc-600: 0 0% 60%;
+    --color-bgc-700: 0 0% 70%;
+    --color-bgc-800: 0 0% 80%;
+    --color-bgc-900: 0 0% 90%;
+    --color-bgc-950: 0 0% 95%;
   }
 }
 

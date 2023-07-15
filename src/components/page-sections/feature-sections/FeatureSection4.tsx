@@ -54,7 +54,7 @@ export const FeatureSection4: FC<FeatureSectionProps> = ({
 }) => {
   return (
     <div
-      className={`bg-white py-24 sm:py-32 ${className}`}
+      className={`bg-bgc-0 py-24 sm:py-32 ${className}`}
       {...props}
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -62,10 +62,10 @@ export const FeatureSection4: FC<FeatureSectionProps> = ({
           <h2 className='text-base font-semibold leading-7 text-primary-600'>
             Everything you need
           </h2>
-          <p className='mt-2 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl'>
+          <p className='mt-2 text-3xl font-bold tracking-tight text-accent-0 sm:text-4xl'>
             No server? No problem.
           </p>
-          <p className='mt-6 text-lg leading-8 text-neutral-600'>
+          <p className='mt-6 text-lg leading-8 text-accent-300'>
             Lorem ipsum, dolor sit amet consectetur
             adipisicing elit. Maiores impedit perferendis
             suscipit eaque, iste dolor cupiditate
@@ -78,23 +78,23 @@ export const FeatureSection4: FC<FeatureSectionProps> = ({
           <img
             src='https://tailwindui.com/img/component-images/project-app-screenshot.png'
             alt='App screenshot'
-            className='mb-[-12%] rounded-xl shadow-2xl ring-1 ring-neutral-900/10'
+            className='mb-[-12%] rounded-xl shadow-2xl ring-1 ring-accent-0/10'
             width={2432}
             height={1442}
           />
           <div className='relative' aria-hidden='true'>
-            <div className='absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]' />
+            <div className='absolute -inset-x-20 bottom-0 bg-gradient-to-t from-bgc-0 pt-[7%]' />
           </div>
         </div>
       </div>
       <div className='mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8'>
-        <dl className='mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-neutral-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16'>
+        <dl className='mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-accent-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16'>
           {features.map((feature) => (
             <div
               key={feature.name}
               className='relative pl-9'
             >
-              <dt className='inline font-semibold text-neutral-900'>
+              <dt className='inline font-semibold text-accent-0'>
                 <feature.icon
                   className='absolute left-1 top-1 h-5 w-5 text-primary-600'
                   aria-hidden='true'

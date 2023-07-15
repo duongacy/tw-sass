@@ -69,101 +69,15 @@ const MainTemplate: FC<DivProps> = ({ children }) => {
                       </button>
                     </div>
                   </Transition.Child>
-                  {/* Sidebar component, swap this element with another sidebar if you like */}
                   <SidebarSection />
-                  {/* <div className='flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2'>
-                    <div className='flex h-16 shrink-0 items-center'>
-                      <img
-                        className='h-8 w-auto'
-                        src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-                        alt='Your Company'
-                      />
-                    </div>
-                    <nav className='flex flex-1 flex-col'>
-                      <ul
-                        role='list'
-                        className='flex flex-1 flex-col gap-y-7'
-                      >
-                        <li>
-                          <ul
-                            role='list'
-                            className='-mx-2 space-y-1'
-                          >
-                            {navigation.map((item) => (
-                              <li key={item.name}>
-                                <a
-                                  href={item.href}
-                                  className={classNames(
-                                    item.current
-                                      ? 'bg-neutral-50 text-primary-600'
-                                      : 'text-neutral-700 hover:bg-neutral-50 hover:text-primary-600',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
-                                  )}
-                                >
-                                  <item.icon
-                                    className={classNames(
-                                      item.current
-                                        ? 'text-primary-600'
-                                        : 'text-neutral-400 group-hover:text-primary-600',
-                                      'h-6 w-6 shrink-0'
-                                    )}
-                                    aria-hidden='true'
-                                  />
-                                  {item.name}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </li>
-                        <li>
-                          <div className='text-xs font-semibold leading-6 text-neutral-400'>
-                            Your teams
-                          </div>
-                          <ul
-                            role='list'
-                            className='-mx-2 mt-2 space-y-1'
-                          >
-                            {teams.map((team) => (
-                              <li key={team.name}>
-                                <a
-                                  href={team.href}
-                                  className={classNames(
-                                    team.current
-                                      ? 'bg-neutral-50 text-primary-600'
-                                      : 'text-neutral-700 hover:bg-neutral-50 hover:text-primary-600',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
-                                  )}
-                                >
-                                  <span
-                                    className={classNames(
-                                      team.current
-                                        ? 'border-primary-600 text-primary-600'
-                                        : 'border-neutral-200 text-neutral-400 group-hover:border-primary-600 group-hover:text-primary-600',
-                                      'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium'
-                                    )}
-                                  >
-                                    {team.initial}
-                                  </span>
-                                  <span className='truncate'>
-                                    {team.name}
-                                  </span>
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div> */}
                 </Dialog.Panel>
               </Transition.Child>
             </div>
           </Dialog>
         </Transition.Root>
 
-        {/* Static sidebar for desktop */}
         <div className='hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col'>
-          <SidebarSection />
+          <SidebarSection/>
         </div>
 
         <div className='sticky top-0 z-40 flex items-center gap-x-6 bg-white px-4 py-4 shadow-sm sm:px-6 lg:hidden'>
@@ -191,8 +105,8 @@ const MainTemplate: FC<DivProps> = ({ children }) => {
           </a>
         </div>
 
-        <div className='xl:pl-96'>
-          <div className='px-4 py-10 sm:px-6 lg:px-8 lg:py-6'>
+        <div className='lg:pl-72'>
+          <div className='px-4 py-10 sm:px-6'>
             {children}
           </div>
         </div>

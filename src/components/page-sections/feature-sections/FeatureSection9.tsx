@@ -36,15 +36,15 @@ export const FeatureSection9: FC<FeatureSectionProps> = ({
 }) => {
   return (
     <div
-      className={`bg-neutral-900 py-24 sm:py-32 ${className}`}
+      className={`bg-bgc-0 py-24 sm:py-32 ${className}`}
       {...props}
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
-          <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+          <h2 className='text-3xl font-bold tracking-tight text-accent-0 sm:text-4xl'>
             Stay on top of customer support
           </h2>
-          <p className='mt-6 text-lg leading-8 text-neutral-300'>
+          <p className='mt-6 text-lg leading-8 text-accent-100'>
             Lorem ipsum dolor sit amet consect adipisicing
             elit. Possimus magnam voluptatum cupiditate
             veritatis in accusamus quisquam.
@@ -57,16 +57,16 @@ export const FeatureSection9: FC<FeatureSectionProps> = ({
                 key={feature.name}
                 className='flex flex-col'
               >
-                <dt className='text-base font-semibold leading-7 text-white'>
+                <dt className='text-base font-semibold leading-7 text-accent-0'>
                   <div className='mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500'>
                     <feature.icon
-                      className='h-6 w-6 text-white'
+                      className='h-6 w-6 text-accent-0'
                       aria-hidden='true'
                     />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className='mt-1 flex flex-auto flex-col text-base leading-7 text-neutral-300'>
+                <dd className='mt-1 flex flex-auto flex-col text-base leading-7 text-accent-200'>
                   <p className='flex-auto'>
                     {feature.description}
                   </p>
