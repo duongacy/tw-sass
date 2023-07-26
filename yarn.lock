@@ -305,6 +305,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@radix-ui/colors@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/colors/-/colors-1.0.1.tgz#e9703d6e1b6f3ace1855e5d784353327a548042c"
+  integrity sha512-xySw8f0ZVsAEP+e7iLl3EvcBXX7gsIlC1Zso/sPBW9gIWerBTgz6axrjU+MZ39wD+WFi5h5zdWpsg3+hwt2Qsg==
+
 "@radix-ui/primitive@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/primitive/-/primitive-1.0.1.tgz#e46f9958b35d10e9f6dc71c497305c22e3e55dbd"
@@ -3141,9 +3146,9 @@ typed-array-length@^1.0.4:
     is-typed-array "^1.1.9"
 
 typescript@5.1.0:
-  version "5.2.0-dev.20230724"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230724.tgz#1957fb44c3c9884c911ab47b883eb29c983f0f7f"
-  integrity sha512-imp5MKTFe3BmE+opYLWqglHjPJ3HQtmwcFX0zYKhky/m/ncUpMqnVnjZSoncvTkKGI8s4Ng88LqOEgvLa4brFg==
+  version "5.2.0-dev.20230726"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230726.tgz#4ca0c0dd2817f041c5521636fd5afbea7a3f1a04"
+  integrity sha512-WXVjQVYHgcJwZh0r5TzBl42dzg6ap9VS0+8dm76/i0T/BhLnmC3CIBsLHZ5WQ3l1CqO/W5kSuywX94xVg98otA==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

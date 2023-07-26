@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+const { mauve, violet } = require('@radix-ui/colors');
 
 module.exports = {
   // darkMode: 'class',
@@ -39,6 +40,20 @@ module.exports = {
       maxWidth: {
         '2xl': '40rem',
       },
+      keyframes: {
+        slideDown: {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        slideUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      },
     },
     colors: {
       transparent: 'transparent',
@@ -53,32 +68,17 @@ module.exports = {
       error: '',
       warning: '',
       inherit: 'inherit',
+      ...mauve,
+      ...violet,
 
       'bgc-1': 'hsl(var(--color-bgc-1) / <alpha-value>)',
       'bgc-2': 'hsl(var(--color-bgc-2) / <alpha-value>)',
-      // 'bgc-3': 'hsl(var(--color-bgc-3) / <alpha-value>)',
-      // 'bgc-200': 'hsl(var(--color-bgc-200) / <alpha-value>)',
-      // 'bgc-300': 'hsl(var(--color-bgc-300) / <alpha-value>)',
-      // 'bgc-400': 'hsl(var(--color-bgc-400) / <alpha-value>)',
-      // 'bgc-20': 'hsl(var(--color-bgc-20) / <alpha-value>)',
-      // 'bgc-600': 'hsl(var(--color-bgc-600) / <alpha-value>)',
-      // 'bgc-700': 'hsl(var(--color-bgc-700) / <alpha-value>)',
-      // 'bgc-800': 'hsl(var(--color-bgc-800) / <alpha-value>)',
-      // 'bgc-900': 'hsl(var(--color-bgc-900) / <alpha-value>)',
-      // 'bgc-950': 'hsl(var(--color-bgc-950) / <alpha-value>)',
+      
 
       'accent-1': 'hsl(var(--color-accent-1) / <alpha-value>)',
       'accent-2': 'hsl(var(--color-accent-2) / <alpha-value>)',
       'accent-3': 'hsl(var(--color-accent-3) / <alpha-value>)',
-      // 'accent-200': 'hsl(var(--color-accent-200) / <alpha-value>)',
-      // 'accent-300': 'hsl(var(--color-accent-300) / <alpha-value>)',
-      // 'accent-400': 'hsl(var(--color-accent-400) / <alpha-value>)',
-      // 'accent-20': 'hsl(var(--color-accent-20) / <alpha-value>)',
-      // 'accent-600': 'hsl(var(--color-accent-600) / <alpha-value>)',
-      // 'accent-700': 'hsl(var(--color-accent-700) / <alpha-value>)',
-      // 'accent-800': 'hsl(var(--color-accent-800) / <alpha-value>)',
-      // 'accent-900': 'hsl(var(--color-accent-900) / <alpha-value>)',
-      // 'accent-950': 'hsl(var(--color-accent-950) / <alpha-value>)',
+      
     },
   },
   plugins: [require('@tailwindcss/forms')],
