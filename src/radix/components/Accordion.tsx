@@ -10,7 +10,7 @@ const AccordionItem = React.forwardRef<
 >(({ children, className, ...props }, forwardedRef) => (
   <Accordion.Item
     className={classNames(
-      'mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10',
+      'mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b',
       className
     )}
     {...props}
@@ -28,7 +28,7 @@ const AccordionTrigger = React.forwardRef<
   <Accordion.Header className='flex'>
     <Accordion.Trigger
       className={classNames(
-        'group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none text-violet11 shadow-[0_1px_0] shadow-mauve6 outline-none hover:bg-mauve2',
+        'group flex h-11 flex-1 cursor-default items-center justify-between px-5 leading-none shadow outline-none',
         className
       )}
       {...props}
@@ -36,7 +36,7 @@ const AccordionTrigger = React.forwardRef<
     >
       {children}
       <ChevronDownIcon
-        className='text-violet10 transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180'
+        className='transition-transform duration-300 group-data-[state=open]:rotate-180'
         aria-hidden
       />
     </Accordion.Trigger>
@@ -50,7 +50,7 @@ const AccordionContent = React.forwardRef<
 >(({ children, className, ...props }, forwardedRef) => (
   <Accordion.Content
     className={classNames(
-      'overflow-hidden bg-mauve2 text-[15px] text-mauve11 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
+      'overflow-hidden data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
       className
     )}
     {...props}
@@ -80,10 +80,7 @@ export const RadixAccordion: React.FC<
 > = ({ items = [], className = '', ...props }) => {
   return (
     <Accordion.Root
-      className={
-        'rounded-md bg-mauve6 shadow-[0_2px_10px] shadow-black/5 ' +
-        className
-      }
+      className={'rounded-md shadow ' + className}
       {...props}
     >
       {items.map((item) => (
