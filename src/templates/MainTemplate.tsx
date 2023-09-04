@@ -77,7 +77,7 @@ const MainTemplate: FC<DivProps> = ({ children }) => {
         </Transition.Root>
 
         <div className='hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col'>
-          <SidebarSection/>
+          <SidebarSection />
         </div>
 
         <div className='sticky top-0 z-40 flex items-center gap-x-6 bg-white px-4 py-4 shadow-sm sm:px-6 lg:hidden'>

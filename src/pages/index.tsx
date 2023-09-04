@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import { Feature01 } from '@/components2/Marketing/PageSections/Feature/Feature01';
 
 type Repo = {
   name: string;
@@ -10,6 +11,10 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = () => {
-  return <></>;
+  return (
+    <>
+      <Feature01 />
+    </>
+  );
 };
 export default Home;
